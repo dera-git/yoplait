@@ -1,0 +1,689 @@
+.kl-section-game-competition{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-top: 13px;
+    &::before{
+        content: '';
+        position: absolute;
+        background: url("../images/jeu-concours/bg-top.svg") no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        left: 0;
+        top: -1px;
+        width: 100%;
+        height: 103px;
+        @include media-breakpoint-down(sm){
+            height: 40px;
+        }
+    }
+}
+.kl-container--form{
+    margin-top: -55px;
+    @include media-breakpoint-between(lg, xl){
+        margin-top: 15px;
+    }
+}
+.kl-desc-game-competition{
+    position: relative;
+    transform: translateX(17%);
+    @include media-breakpoint-down(lg){
+        transform: none;
+    }
+}
+.kl-p-18-22{
+    a{
+        font-family: $chewyPro;
+        font-size: 22px;
+        font-weight: $regular;
+        color: $yellow;
+    }
+    strong{
+        font-weight: $semi_bold;
+    }
+}
+%title_form{
+    font-family: $chewyPro;
+    font-size: 24px !important;
+    font-weight: $regular !important;
+    line-height: 28px;
+    color: $red;
+    @include media-breakpoint-down(md){
+        font-size: 21px !important;
+        line-height: 23px;
+    }
+}
+%list_style_title{
+    position: absolute;
+    background: url("../images/jeu-concours/bg-number.svg") no-repeat;
+    background-position: center !important;
+    background-size: contain !important;
+    font-size: 36px;
+    width: 42px;
+    height: 48px;
+    left: -57px;
+    top: 0;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-down(md){
+        font-size: 26px;
+        width: 32px;
+        height: 38px;
+        left: -7px;
+        transform: none !important;
+        top: 0 !important;
+    }
+}
+%fs_text_22{
+    font-family: $chewyPro;
+    font-size: 22px !important;
+    font-weight: $regular !important;
+    color: $black_primary;
+    @include media-breakpoint-down(md){
+        font-size: 19px !important;
+        line-height: 20px !important;
+    }
+}
+%fs_text_18{
+    font-family: $chewyPro;
+    font-size: 18px !important;
+    font-weight: $regular !important;
+    color: $black_primary;
+}
+%input_style{
+    border-radius: 5px !important;
+    border: 2px solid $yellow !important;
+    @include media-breakpoint-up(lg){
+        padding: 10px 15px !important;
+    }
+}
+%input_checkbox{
+    appearance: none;
+    background: transparent;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    flex: 0 0 auto;
+    &:checked{
+        opacity: 0;
+    }
+}
+%input_checked{
+    content: '';
+    position: absolute;
+    background: url('../images/jeu-concours/checked.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    left: -18px;
+    top: 8px;
+}
+.kl-form-opinion{
+    @include mask_img('../images/jeu-concours/bg-form.svg', 100%, 100%);
+    padding: 110px 130px 100px 184px;
+    z-index: 2;
+    position: relative;
+    @include media-breakpoint-down(xl){
+        padding: 110px 105px 100px 159px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 110px 55px 100px 109px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 110px 30px 100px 30px;
+    }
+    @include media-breakpoint-down(xs_320){
+        padding: 110px 22px 100px 22px;
+    }
+    .gform_fields{
+        grid-column-gap: 30px !important;
+        grid-row-gap: 25px !important;
+        @include media-breakpoint-down(sm){
+            grid-template-columns: 100% !important;
+        }
+    }
+    .gfield.gfield--width-full{
+        @include media-breakpoint-down(sm){
+            grid-column: auto !important;
+        }
+    }
+    .gform_heading,
+    .gfield_required{
+        display: none !important;
+    }
+    input:not([type="submit"]){
+        @extend %text_input;
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    textarea,
+    .kl-gf-input input{
+        @extend %input_style;
+    }
+    .kl-gf-input{
+        .gfield_label{
+            @extend %title_form;
+        }
+    }
+    .gfield_label.gfield_label_before_complex{
+        @extend %title_form;
+        position: relative;
+        margin-bottom: 0 !important;
+        @include media-breakpoint-down(md){
+            padding-left: 32px;
+        }
+        &::before{
+            @extend %list_style_title;
+            content: '1.';
+            top: -2px;
+        }
+    }
+    .kl-form-block-1{
+        display: flex !important;
+        flex-direction: column;
+        .gfield_label.gfield_label_before_complex{
+            order: 0;
+            @include media-breakpoint-down(md){
+                padding-left: 32px;
+            }
+        }
+        .gfield_description:not(.gfield_validation_message){
+            order: 1;
+            padding-top: 0 !important;
+            font-family: $lexend !important;
+            font-size: 14px !important;
+            font-weight: $regular;
+            color: $black_primary;
+            margin-top: -5px;
+            @include media-breakpoint-down(lg){
+                margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                padding-left: 32px;
+            }
+        }
+        .ginput_container.ginput_container_checkbox{
+            order: 3;
+        }
+        .gfield_validation_message{
+            order: 4;
+        }
+        .ginput_container_checkbox{
+            margin-top: 18px;
+        }
+        .gfield_checkbox{
+            column-count: 2;
+            @include media-breakpoint-down(lg){
+                column-count: 1;
+            }
+            .gchoice{
+                @include media-breakpoint-down(lg){
+                    display: flex;
+                }
+                & + .gchoice{
+                    margin-top: 10px;
+                }
+            }
+        }
+        .gchoice{
+            label{
+                @extend %fs_text_22;
+                text-transform: lowercase;
+                position: relative;
+                padding-left: 10px;
+                small{
+                    @include mask_img('../images/jeu-concours/bg-small.svg', 100%, 100%);
+                    color: $white;
+                    padding: 2px 9.5px 3px;
+                }
+            }
+        }
+        
+        .gchoice:last-of-type{
+            label{
+                text-transform: inherit;
+            }
+        }
+        .gchoice{
+            &:first-of-type{
+                label{
+                    color: $blue_light;
+                    span{
+                        color: $tornado_nature_primary;
+                    }
+                }
+            }
+            &:nth-child(2){
+                label{
+                    color: $tornado_fraise_secondary;
+                    span{
+                        color: $tornado_fraise_primary;
+                    }
+                }
+            }
+            &:nth-child(3){
+                label{
+                    color: $tornado_vanille_secondary;
+                    span{
+                        color: $tornado_vanille_primary;
+                    }
+                }
+            }
+            &:nth-child(4){
+                small{
+                    background: $brasse_probiotiques;
+                }
+            }
+            &:nth-child(5){
+                small{
+                    background: $tornado_fraise_secondary;
+                }
+            }
+            &:nth-child(4),
+            &:nth-child(5){
+                label{
+                    color: $brasse_probiotiques;
+                    span{
+                        color: $tornado_probiotique_primary;
+                    }
+                }
+            }
+            &:nth-child(6){
+                label{
+                    color: $brasse_grecque;
+                    span{
+                        color: $tornado_grecque_primary;
+                    }
+                }
+            }
+            &:nth-child(7){
+                small{
+                    background: $tornado_proteine_secondary;
+                }
+            }
+            &:nth-child(8){
+                small{
+                    background: $tornado_vanille_primary;
+                }
+            }
+            &:nth-child(7),
+            &:nth-child(8){
+                label{
+                    color: $tornado_proteine_secondary;
+                    span{
+                        color: $tornado_proteine_primary;
+                    }
+                }
+            }
+            &:nth-child(9){
+                label{
+                    color: $brasse_doux_lactose;
+                    span{
+                        color: $tornado_sanslactose_primary;
+                    }
+                }
+            }
+        }
+        .gfield_checkbox{
+            input{
+                @include media-breakpoint-down(md){
+                    top: 0;
+                    position: relative;
+                }
+                &:checked + label::before{
+                    @include media-breakpoint-down(md){
+                        top: 0;
+                        left: -15px;
+                    }
+                }
+            }
+        }
+    }
+    .kl-form-block-2{
+        display: flex !important;
+        flex-direction: column;
+        margin-top: 20px !important;
+        .gfield_label.gfield_label_before_complex{
+            order: 0;
+            @include media-breakpoint-down(md){
+                padding-left: 32px;
+            }
+        }
+        .gfield_description:not(.gfield_validation_message){
+            order: 1;
+            padding-top: 0 !important;
+            font-family: $lexend !important;
+            font-size: 14px !important;
+            font-weight: $regular;
+            color: $black_primary;
+            margin-top: -5px;
+            @include media-breakpoint-down(lg){
+                margin-top: 0;
+            }
+            @include media-breakpoint-down(md){
+                padding-left: 32px;
+            }
+        }
+        .ginput_container_checkbox{
+            order: 3;
+            margin-top: 18px;
+        }
+        .gfield_validation_message{
+            order: 4;
+        }
+        .gfield_label{
+            position: relative;
+            &::before{
+                @extend %list_style_title;
+                content: '2.';
+                top: 50%;
+                transform: translateY(-37%);
+            }
+        }
+        .gchoice{
+            display: flex;
+            & + .gchoice{
+                margin-top: 18px;
+                @include media-breakpoint-down(lg){
+                    margin-top: 10px;
+                }
+            }
+            input{
+                position: relative;
+                top: 5px;
+            }
+            label{
+                font-size: 16px !important;
+                font-family: $lexend;
+                font-weight: $semi_bold;
+                color: $black_primary;
+                position: relative;
+                padding-left: 10px;
+                span{
+                    font-weight: $regular
+                }
+                small{
+                    font-size: 12px !important;
+                }
+            }
+        }
+        
+        .gfield_checkbox input:checked + label::before{
+            left: -15px;
+            top: 4px;
+        }
+    }
+    .kl-form-block-3{
+        margin-top: 30px !important;
+        .gfield_label{
+            @extend %title_form;
+            position: relative;
+            margin-bottom: 10px !important;
+            @include media-breakpoint-down(md){
+                padding-left: 32px !important;
+            }
+            &::before{
+                @extend %list_style_title;
+                content: '3.';
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .gfield_radio{
+            display: flex;
+            .gchoice{
+                &:last-of-type{
+                    margin-left: 30px;
+                }
+                input{
+                    appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid $black_primary;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        background: $red;
+                        width: 8px;
+                        height: 8px;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 50%;
+                        opacity: 0;
+                    }
+                    &:checked{
+                        &::before{
+                            opacity: 1;
+                        }
+                    }
+                }
+                label{
+                    @extend %fs_text_22;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    .kl-form-block-after-3{
+        .gfield_label{
+            @extend %fs_text_18;
+        }
+    }
+    .kl-form-block-4{
+        margin-top: 15px;
+        .gfield_label{
+            @extend %title_form;
+            position: relative;
+            margin-bottom: 18px !important;
+            @include media-breakpoint-down(md){
+                padding-left: 32px !important;
+            }
+            &::before{
+                @extend %list_style_title;
+                content: '4.';
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .gsurvey-rating-wrapper{
+            .gsurvey-rating > label{
+                margin-right: 5px;
+                @include media-breakpoint-down(md){
+                    margin-right: 0;
+                }
+            }
+            .gsurvey-rating:not(:checked)>label{
+                background-image: url('../images/jeu-concours/Puce.svg');
+                background-position: center !important;
+                background-size: contain !important;
+                font-size: inherit;
+                line-height: inherit;
+                width: 30px;
+                @include media-breakpoint-down(sm){
+                    width: 25px;
+                }
+                @include media-breakpoint-down(xs_320){
+                    width: 22px;
+                }
+                &:hover,
+                &:hover ~ label{
+                    background-image: url('../images/jeu-concours/Puce-checked.svg');
+                }
+            }
+            .gsurvey-rating>input:checked~label{
+                background-image: url('../images/jeu-concours/Puce-checked.svg');
+            }
+        }
+    }
+    .kl-form-block-after-4{
+        margin-top: 5px;
+        .gfield_label{
+            @extend %fs_text_18;
+        }
+    }
+    .kl-form-block-5{
+        margin-top: 20px !important;
+        display: flex;
+        flex-direction: column;
+        .gfield_label{
+            @extend %title_form;
+            position: relative;
+            margin-bottom: 0 !important;
+            order: 0;
+            @include media-breakpoint-down(md){
+                padding-left: 32px !important;
+            }
+            &::before{
+                @extend %list_style_title;
+                content: '5.';
+                top: 50%;
+                transform: translateY(-37%);
+            }
+        }
+        .ginput_container_textarea{
+            order: 2;
+            margin-top: 15px;
+        }
+        .gfield_description{
+            font-family: $lexend;
+            font-size: 12px;
+            font-weight: $bold;
+            color: $red;
+            padding-top: 0 !important;
+            margin-top: -5px;
+            order: 1;
+            @include media-breakpoint-down(md){
+                padding-left: 32px;
+            }
+        }
+    }
+    .kl-form-block-6{
+        .gfield_label.gfield_label_before_complex{
+            display: none;
+        }
+        .ginput_container_consent{
+            display: flex;
+        }
+        .gfield_consent_label{
+            @extend %fs_text_18;
+            padding-left: 10px;
+            a{
+                text-decoration: underline;
+                color: $black_primary;
+                transition: all .25s;
+                &:hover{
+                    color: $red;
+                }
+            }
+        }
+        input{
+            @extend %input_checkbox;
+            border: 2px solid $yellow;
+            position: relative;
+            top: 4px;
+        }
+        input:checked + label{
+            position: relative;
+            &::before{
+                @extend %input_checked;
+                left: -14px;
+                top: 4px;
+                transform: none
+            }
+        }
+    }
+    .kl-form-block{
+        .gfield_checkbox{
+            input{
+                @extend %input_checkbox;
+                border: 2px solid $black_primary;
+            }
+            input:checked + label{
+                &::before{
+                    @extend %input_checked; 
+                }
+            }
+        }
+    }
+    .gform_footer{
+        justify-content: center;
+        margin-top: 30px !important;
+    }
+    input[type="submit"]{
+        @extend .kl-btn-theme;
+        @extend .kl-btn-xl-theme;
+        background-color: $yellow;
+        border: none;
+        margin-bottom: 0 !important;
+        line-height: inherit !important;
+    }
+    .gform_validation_error{
+        .gform_validation_errors{
+            @extend %gform_validation_error;
+            @extend %gform_validation_error_text;
+        }
+    }
+    .gfield_validation_message{
+        @extend %gform_validation_error;
+        @extend %gfield_validation_message_text;
+    }
+}
+.kl-title-form-opinion{
+    position: relative;
+    h2{
+        display: inline-block;
+        background: $white;
+        padding: 0 10px;
+        @include media-breakpoint-down(md){
+            margin: 0 40px;
+            padding: 0 10px;
+            line-height: 29px !important;
+            font-size: 30px !important;
+        }
+    }
+    svg{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 70px);
+        z-index: -1;
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+    }
+}
+.kl-custom-title-form{
+    margin-top: 20px;
+}
+.kl-text--10{
+    p{
+        font-size: 10px;
+        font-weight: $regular;
+    }
+}
+.kl-image-absolute-yop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-39%, -59%);
+    z-index: 3;
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+}
+
+.kl-block-cofiramtion{
+    @include mask_img('../images/jeu-concours/bg-confirmation.svg', 100%, 100%);
+    padding: 88px 50px 86px;
+}
+.kl-p-stong{
+    strong{
+        font-weight: $semi_bold;
+    }
+}

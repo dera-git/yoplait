@@ -1,0 +1,230 @@
+$white:#ffffff;
+$white_primary:#FAFAFA;
+$black:hsl(0, 0%, 0%);
+$black_primary:#221F20;
+$green_primary:#43856A;
+$green_theme:#2D6630;
+$green_light:#86E564;
+$green_secondary:#DBF0E5;
+$green_tertiary: #ECF7F1;
+$green_quartenary: #4E8B51;
+$green_dark: #124734;
+$orange_primary:#F4AD17;
+$orange_secondary:#F08D52;
+$red_primary:#DD513E;
+$red_secondary:#CF000C;
+$red_tertiary: #CF0014;
+$red: #E3000B;
+$beige_primary: #FFDAAD;
+$beige_secondary: #FDECB2;
+$gray_primary:#E6E4E4;
+$yellow: #F7A600;
+$yellow_secondary: #D8A241;
+$yellow_tertiary: #E1872C;
+$blue: #61A1CA;
+$blue_primary: #37619F;
+$blue_light: #4CB3E0;
+$purple: #6C73B7;
+$burgundy: #A51B32;
+$blue_secondary: #1B2B4C;
+$blue_tertiary: #2B4A82;
+
+$tornado_vanille_primary: #F8C52F;
+$tornado_vanille_secondary: #FCD845; 
+$tornado_fraise_primary: #DE231F;
+$tornado_fraise_secondary: #F09391;
+$tornado_grecque_primary: #00A1BE;
+$tornado_nature_primary: #0082CC;
+$tornado_probiotique_primary: #43A041;
+$tornado_proteine_primary: #224289;
+$tornado_proteine_secondary: #6685B7;
+$tornado_sanslactose_primary: #B37AC2;
+
+$nos_marques_green: #188045;
+$nos_marques_green_primary: #088E44;
+$nos_marques_green_secondary: #6FB461;
+$nos_marques_blue: #5CA6CF;
+$nos_marques_blue_primary: #149DCA;
+$nos_marques_blue_secondary: #0081C0;
+$marron: #B97E4D;
+
+$brasse_probiotiques: #81BD79;
+$brasse_grecque: #49C7D8;
+$brasse_doux_lactose: #D1AED9;
+
+$theme_colors:(
+  'white': $white,
+  'black': $black,
+  'black-primary': $black_primary,
+  'green': $green_theme,
+  'green-light': $green_light,
+  'green-dark': $green_dark,
+  'green-primary': $green_primary,
+  'green-secondary': $green_secondary,
+  'green-quartenary': $green_quartenary,
+  'orange-primary': $orange_primary,
+  'orange-secondary': $orange_secondary,
+  'beige-secondary': $beige_secondary,
+  'red-primary': $red_primary,
+  'red-secondary': $red_secondary,
+  'red-tertiary': $red_tertiary,
+  'red': $red,
+  'beige-primary': $beige_primary,
+  'gray-primary': $gray_primary,
+  'yellow': $yellow,
+  'yellow-secondary': $yellow_secondary,
+  'yellow-tertiary': $yellow_tertiary,
+  'blue': $blue,
+  'blue-primary': $blue_primary,
+  'blue-light': $blue_light,
+  'purple': $purple,
+  'vanille-primary': $tornado_vanille_primary,
+  'vanille-secondary': $tornado_vanille_secondary,
+  'fraise-primary': $tornado_fraise_primary,
+  'fraise-secondary': $tornado_fraise_secondary,
+  'grecque-primary': $tornado_grecque_primary,
+  'nature-primary': $tornado_nature_primary,
+  'probiotique-primary': $tornado_probiotique_primary,
+  'proteine-primary': $tornado_proteine_primary,
+  'proteine-secondary': $tornado_proteine_secondary,
+  'sanslactose-secondary': $tornado_sanslactose_primary,
+  'burdundy': $burgundy,
+  'blue-secondary': $blue_secondary,
+  'blue-tertiary': $blue_tertiary,
+  'nos-marques-green': $nos_marques_green,
+  'marron': $marron,
+  'nos-marques-blue': $nos_marques_blue,
+  'nos-marques-blue-primary': $nos_marques_blue_primary,
+  'nos-marques-green-primary': $nos_marques_green_primary,
+  'nos-marques-blue-secondary': $nos_marques_blue_secondary,
+  'nos-marques-green-secondary': $nos_marques_green_secondary,
+);
+
+$light:300;
+$regular:400;
+$medium:500;
+$semi_bold:600;
+$bold:700;
+$extra_bold:800;
+$extra_bolder:900;
+
+$font_weight: (
+  'light' : $light,
+  'regular' : $regular,
+  'medium' : $medium,
+  'semi_bold' : $semi_bold,
+  'bold' : $bold,
+  'extra_bold' : $extra_bold,
+  'extra_bolder' : $extra_bolder,
+);
+
+$font_primary: 'Lato', sans-serif;
+$secondary_font: 'Poppins', sans-serif;
+$third_font: 'Satisfy', cursive;
+$dk_pardesi: 'DK Pardesi';
+$moreSugar: 'More Sugar';
+$lexend: 'Lexend', sans-serif;
+$chewyPro: 'Chewy Pro';
+$inter: 'Inter', sans-serif;
+
+$font_familly: (
+  'primary' : $font_primary,
+  'secondary' : $secondary_font,
+  'third' : $third_font,
+  'forth' : $dk_pardesi,
+  'fifth' : $moreSugar,
+  'sixth' : $lexend,
+  'seventh' : $chewyPro,
+  'inter' : $inter,
+);
+
+//line-height
+$line_height: (
+  "0": 0,
+  "0_6": 0.6,
+  "0_95": 0.95,
+  "1": 1,
+  "1_1": 1.1,
+  "1_2": 1.2,
+  "1_3": 1.3,
+  "1_4": 1.4,
+  "1_5": 1.5,
+  "1_6": 1.6,
+);
+
+//z-index
+$z_index: (
+  "-1",
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+);
+
+//max value
+$max_value: (
+  "none": auto,
+  "66": 66px,
+  "138": 138px,
+  "240": 240px,
+  "280": 280px,
+  "300": 300px,
+  "373": 373px,
+  "346": 346px,
+  "370": 370px,
+  "384": 384px,
+  "400": 400px,
+  "428": 428px,
+  "450": 450px,
+  "490": 490px,
+  "486": 486px,
+  "500": 500px,
+  "512": 512px,
+  "520": 520px,
+  "530": 530px,
+  "545": 545px,
+  "568": 568px,
+  "585": 585px,
+  "590": 590px,
+  "595": 595px,
+  "730": 730px,
+  "826": 826px,
+  "1067": 1067px,
+  "1164": 1164px,
+  "1176": 1176px,
+);
+
+$spacing: (
+  "0": 0px,
+  "5": 5px,
+  "12": 12px,
+  "20": 20px,
+  "30": 30px,
+  "35": 35px,
+  "40": 40px,
+  "45": 45px,
+  "50": 50px,
+  "55": 55px,
+  "60": 60px,
+  "75": 75px,
+  "85": 85px,
+  "110": 110px,
+  "125": 125px,
+);
+
+$sides-direction: (
+  "t": top,
+  "b": bottom,
+  "s": left,
+  "e": right,
+);
+
+$grid-breakpoints: (xs_320: 320.98px, xs_380: 380.98px, xs: 480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxl_1440: 1440.98px, xxxl:1600px);
+$bs-breakpoints: (xs_320: 320.98px, xs_380: 380.98px, xs: 480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, xxl_1440: 1440.98px, xxxl:1600px);

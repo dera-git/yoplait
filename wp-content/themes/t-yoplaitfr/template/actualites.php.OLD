@@ -1,0 +1,134 @@
+<?php
+    /*
+        Template Name: Actualités
+    */
+?>
+<?php get_header(); ?>
+    
+<section class="kl-section-news">
+        <!-- <span class="kl-decor-news-left d-md-block d-none">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/images/news/dessert.png" class="img-fluid kl-img-mask" alt="dessert">
+        </span> -->
+        <span class="kl-decor-news-right">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/images/news/fruit.png" class="img-fluid" alt="dessert">
+        </span>
+
+        <div class="container">
+            <div class="kl-default-ctx-stf text-center kl-color-black kl-mb-lg-100 kl-mb-80">
+                <div class="kl-title kl-mb-xl-40 kl-mb-30">
+                    <h2><?php the_title(); ?></h2>
+                </div>
+
+                <div class="kl-decor-news-banner">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/news/banner-news.png" class="img-fluid" alt="banniere marques de respect">
+                    <div class="kl-link-news-banner">
+                        <a href="https://sodiaal.coop/marquesderespect/" target="_blank" class="kl-btn-red-primary kl-btn-decor kl-custom kl-fill-beige-primary equalH5">Découvrez nos engagements</a>
+                    </div>
+                </div>
+
+                <div class="kl-subtitle">
+                    <h3><?php the_content(); ?></h3>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="kl-filter-tag-nws">
+            <div class="container-fluid">
+                <ul class="list-unstyled kl-filter-list mb-0">
+                    <li class="kl-filter-list-item">
+                        <a href="#" class="active">Toutes</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Actualité</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">DIY</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Evènements</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Gastronomie</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Innovation</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Lait</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Santé</a>
+                    </li>
+                    <li class="kl-filter-list-item">
+                        <a href="#">Solidarité</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section class="kl-section-news-info overflow-hidden">
+        <span class="kl-anim-left">
+            <svg width="307" height="620" viewBox="0 0 307 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="kl-anim-act-left" fill-rule="evenodd" clip-rule="evenodd" d="M238.791 24.2885C138.115 -47.1647 4.37729 58.1138 -105.528 142.754C-210.185 223.352 -330.545 322.548 -306.166 443.97C-279.937 574.599 -142.814 629.196 -10.0364 618.342C108.118 608.684 205.396 514.969 254.326 398.154C310.121 264.947 343.45 98.5684 238.791 24.2885Z" fill="#DBF0E5"/>
+            </svg>
+        </span>
+        <span class="kl-anim-right">
+            <svg width="317" height="668" viewBox="0 0 317 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="" fill-rule="evenodd" clip-rule="evenodd" d="M441.173 9.32119C326.008 -35.1559 222.295 99.7995 136.602 208.886C55.0009 312.763 -37.2431 438.531 16.2707 550.217C73.8428 670.373 220.185 689.541 346.207 646.342C458.35 607.901 529.571 493.127 548.245 367.863C569.539 225.022 560.894 55.5578 441.173 9.32119Z" fill="#DBF0E5"/>
+            </svg>
+        </span>
+        <div class="kl-container-1158 container">
+            <div class="row kl-row-card-act">
+                <?php
+                $articles = new WP_Query(array(
+                    'ignore_sticky_posts'	    => true,
+                    'update_post_meta_cache'    => false,
+                    'no_found_rows'		        => true,
+                    'post_type'			        => 'post',
+                    'orderby'				    => 'date',
+                    'order'				        => 'DESC',
+                    'posts_per_page'		    => -1
+                ));
+                while ($articles->have_posts()) : $articles->the_post(); ?>
+                
+                <div class="col-lg-4 col-sm-6">
+                    <div class="kl-card-act h-100 kl-bg-beige-primary">
+                        <div class="kl-card-header equalH1">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium', array('class' => 'img-fluid kl-img w-100', 'alt' => get_the_title()));
+                            }
+                            ?>
+                            <!--
+                            <div class="kl-category d-flex flex-wrap">
+                                <span class="badge kl-bg-green-secondary kl-color-red-primary">Santé</span>
+                            </div>
+                            -->
+                        </div>
+                        <div class="kl-card-body">
+                            <div class="kl-date kl-color-red-secondary kl-mb-30 equalH2">
+                                Publié le <?php echo get_the_date('d/m/Y'); ?>
+                            </div>
+                            <p class="bold equalH3">
+                                <?php the_title(); ?>
+                            </p>
+                            <p class="equalH4">
+                                <?php echo excerpt_custom(get_the_content(), 140); ?>
+                            </p>
+                        </div>
+                        <div class="kl-card-footer">
+                            <a href="<?php the_permalink(); ?>" class="kl-btn-red-primary kl-btn-decor kl-custom kl-fill-beige-primary equalH5">
+                                Lire l'article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <?php endwhile; wp_reset_query(); ?>
+            </div>
+        </div>
+    </section>
+    
+<?php get_footer(); ?>

@@ -1,0 +1,53 @@
+Police utilisée : Galada pour le titre sur bannière
+Roboto pour le texte classique
+
+----------------------------------
+section du haut :
+
+<div class="objectifs">
+        <p class="text-center subtitle">Panier de Yoplait soutient les objectifs 2025 de l’OFA et de ses partenaires.</p>
+        <div class="participe-wrapper">
+            <div class="participe-item">
+                <img src="/images/desktop/engagements_flocon.png">
+                <p class="">
+                    Former 30 000 nouveaux apiculteurs
+                </p>
+            </div>
+            <div class="participe-item">
+                <img src="/images/desktop/engagements_10_millions.png">
+                <p class="">
+                    de nouvelles colonies d’abeilles créées en europe
+                </p>
+            </div>
+            <div class="participe-item">
+                <img src="/images/desktop/engagements_planter.png">
+                <p class="">
+                    Planter chaque année 1 milliard de fleurs
+                </p>
+            </div>
+            <div class="participe-item">
+                <img src="/images/desktop/engagements_developper.png">
+                <p class="">
+                    Développer des programmes<br>de recherche
+                </p>
+            </div>
+        </div>
+    </div>
+
+---------------------------------
+section du bas (bannière jaune) :
+
+<div class="proteger-abeille">
+                <div class="header-title text-center">
+            <img class="logo-ofa" src="/images/desktop/logo_ofa.png">
+            <p class="title title-border title-border-center">Aidez-nous à protéger les abeilles !</p>
+            <p class="subtitle text-center mx-auto" style="max-width:1000px;">
+                Aujourd'hui, 30% des colonies d'abeilles disparaissent chaque année en France (source Unaf). Vos dons peuvent faire une différence. Ils nous serviront à favoriser le repeuplement des colonies, à regénérer leurs habitats et à former plus d'apiculteurs professionnels.
+            </p>
+            <a href="https://www.helloasso.com/associations/observatoire-francais-d-apidologie/formulaires/1" class="d-block mx-auto" style="width:270px;">
+                <img src="/images/desktop/btn-je-fais-un-don.png" alt="">
+            </a>
+        </div>
+    </div>
+
+URL don : https://www.helloasso.com/associations/observatoire-francais-d-apidologie/formulaires/1

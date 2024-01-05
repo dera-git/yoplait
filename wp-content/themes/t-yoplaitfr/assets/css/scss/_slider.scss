@@ -1,0 +1,236 @@
+.kl-slider-content{
+  position: relative;
+  .kl-moving-shape{
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    min-width: 288px;
+    @include media-breakpoint-down(sm){
+      svg{
+        max-width: 320px;
+      }
+    }
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .kl-control-slider{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 648px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    z-index: 20;
+    @include media-breakpoint-up(lg){
+      transform: translate(calc(-50% + 20px), -50%);
+    }
+    .kl-btn-control-slider{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.kl-slider-yop-default{
+  .slick-list{
+    overflow: visible;
+  }
+  .slick-dots{
+    bottom: -75px;
+    .slick-active{
+      button{
+        opacity: 1;
+      }
+    }
+    button{
+      background: $green_primary;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      opacity: 0.5;
+      &:before{
+        display: none;
+      }
+    }
+  }
+  .kl-slider-yop-item{
+    width: 337px;
+    text-align: center;
+    margin: 0 40px;
+    @include media-breakpoint-up(xl){
+      margin: 0 60px;
+    }
+    .kl-thumbnail{
+      opacity: 0.52;
+    }
+    &.slick-active, &.slick-current{
+      .kl-thumbnail{
+        opacity: 1;
+      }
+      .kl-img-slider{
+        min-width: 337px;
+      }
+    }
+    .kl-thumbnail{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 367px;
+      @include media-breakpoint-down(sm){
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.kl-slider-navs-info{
+  position: relative;
+  z-index: 10;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  .kl-slider-navs-item{
+    position: relative;
+    z-index: 5;
+    h3{
+      @extend %text_36;
+      line-height: 1.19em;
+      margin-bottom: 34px;
+    }
+    p{
+      & + p{
+        margin-top: 50px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg){
+    .kl-slider-navs-item{
+      h3{
+        margin-bottom: 25px;
+      }
+      p{
+        & + p{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+.kl-slick-navs-info{
+  @include media-breakpoint-up(md){
+    .kl-slider-team-prt{
+      margin-top: -100px;
+    }
+  }
+}
+
+.kl-slider-team-prt{
+  position: relative;
+  .kl-control-slider{
+    position: absolute;
+    bottom: 22%;
+    width: 458px;
+    left: 25px;
+    z-index: 5;
+    @include media-breakpoint-down(xl){
+      max-width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.kl-slider-team{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  .slick-list{
+    overflow: visible;
+  }
+  .kl-figure-slider{
+    display: flex;
+    justify-content: flex-end;
+    @include media-breakpoint-down(md){
+      justify-content: center;
+    }
+    .kl-img-team{
+      @include mask_img('../images/join-us/mask-slider-team.png', 100%, 100%);
+    }
+  }
+  .kl-prt-img-team{
+    position: relative;
+    .kl-decor{
+      position: absolute;
+      z-index: -1;
+      &.kl-left{
+        bottom: 160px;
+        left: -75px;
+      }
+      &.kl-right{
+        bottom: 160px;
+        right: -70px;
+      }
+      &.kl-top{
+        top: -32px;
+        right: -88px;
+      }
+    }
+  }
+  .kl-info-team{
+    position: relative;
+    z-index: 10;
+    margin-top: -120px;
+    h3{
+      @extend %text_32;
+
+    }
+    .kl-bg-team{
+      background: url(../images/join-us/bg-info-slick.png) no-repeat ;
+      background-size: 100% 100%;
+      padding: 77px 60px 77px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-slider-content{
+    .kl-control-slider{
+      .kl-btn-control-slider{
+        width: 100px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+
+}
+
+@media (max-width: 480px) {
+  .kl-slider-content{
+    .kl-control-slider{
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .kl-slick-navs-info{
+    .kl-slider-navs-info{
+      .kl-slider-navs-item{
+        width: 99.65%;
+      }
+    }
+  }
+}

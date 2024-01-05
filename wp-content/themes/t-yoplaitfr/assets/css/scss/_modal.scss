@@ -1,0 +1,113 @@
+.kl-modal-yoplait{
+    background: rgba(255,255,255,.65);
+    .modal-content{
+        background: transparent !important;
+        border: none !important;
+        margin-top: 125px;
+    }
+    .kl-img-left{
+        left: -134px;
+        /*width: 290px;*/
+        top: 32px;
+        @include  media-breakpoint-down(xl){
+            left: -47px;
+            top: inherit;
+            bottom: -60px;
+        }
+        @include  media-breakpoint-down(lg){
+            left: 49px;
+            top: inherit;
+            bottom: -60px;
+        }
+        @media screen and (max-width: 698px){
+            display: none !important;
+        }
+        img{
+            @include  media-breakpoint-down(xl){
+                width: 67%;
+            }
+            @include  media-breakpoint-down(lg){
+                width: 50%;
+            }
+        }
+       
+    }
+    .kl-img-right{
+        right: -56px;
+        top: -6px;
+        @include  media-breakpoint-down(xl){
+            right: -66px;
+            top: 7px;
+        }
+        @include  media-breakpoint-down(lg){
+            right: -86px;
+            top: 44px;
+        }
+        img{
+            @include  media-breakpoint-up(xl){
+                width: 549px;
+            }
+            @include  media-breakpoint-down(xl){
+                width: 92%;
+            }
+            @include  media-breakpoint-down(lg){
+                width: 72%;
+            }
+        }
+    }
+    .kl-close-modal{
+        top: 14px;
+        right: 14px;
+        z-index: 2;
+        background: transparent url('../images/modal-jeu-concours/close-modal.png') no-repeat;
+        border: none;
+        width: 26px;
+        height: 34px;
+        
+    }
+}
+.custom-modal {
+    mask-image: url('../images/modal-jeu-concours/mask-modal.png');
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    padding: 28px 0px;
+    @include  media-breakpoint-down(md){
+        mask-size: 110% 98%;
+    }
+    .kl-left-content{
+        .kl-title-modal{
+            font-family: $chewyPro;
+            font-weight: 400;
+            h2{
+                max-width: 265px;
+                font-size: 64px;
+                line-height: 60px;
+                margin: auto;
+                transform: rotate(-3deg);
+                color: $yellow;
+            }
+            h3{
+                font-size: 36px;
+                margin-top: 0.6rem;
+                color: $white;
+            }
+        }
+    }
+    .kl-content-description-modal{
+        p{
+            font-family: $lexend;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: normal;
+            color: $white;
+            span{
+                font-family: $chewyPro;
+                font-size: 22px;
+
+            }
+        }
+    }
+}
+.modal-dialog {
+    max-width: 960px;
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'DK Pardesi';
+    src: url('DKPardesi.eot');
+    src: url('DKPardesi.eot?#iefix') format('embedded-opentype'),
+        url('DKPardesi.woff2') format('woff2'),
+        url('DKPardesi.woff') format('woff'),
+        url('DKPardesi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

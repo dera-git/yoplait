@@ -1,0 +1,93 @@
+.kl-page-single-article {
+    background: url(../images/single-article/bg-article.png) no-repeat center top;
+    @include media-breakpoint-up(xxl_1440) {
+        background-size: 100% 864px;
+    }
+    @include media-breakpoint-down(lg) {
+        background-size: 100% 700px;
+    }
+    @include media-breakpoint-down(md) {
+        background-size: auto 600px;
+    }
+}
+.kl-section-article {
+    padding-bottom: 91px;
+    position: relative;
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 20px;
+        h1{
+            font-size: 35px !important;
+        }
+    }
+    p {
+        margin-bottom: 20px;
+        strong {
+            font-weight: $semi_bold;
+        }
+    }
+}
+.kl-article-infos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0 10px;
+}
+.kl-article-label {
+    border-radius: 16px;
+    color: $black;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.22;
+    margin: 0 10px 15px 10px;
+    padding: 14.03px 28.38px;
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+.kl-article-date {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.22;
+    margin: 0 10px 15px 10px;
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+    img {
+        margin-right: 20px;
+    }
+}
+.kl-part-videos {
+    position: relative;
+    .kl-decor-anim-article-left {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index: -1;
+    }
+    .kl-decor-anim-article-right {
+        position: absolute;
+        //bottom: 358px;
+        bottom: 20%;
+        right: 0;
+        z-index: -1;
+    }
+    .kl-decor-article-flower {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        @include media-breakpoint-down(md){
+            max-width: 200px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        svg{
+            max-width: 120px;
+        }
+    }
+}

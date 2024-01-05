@@ -1,0 +1,118 @@
+.kl-nos-marques{
+    .kl-img-hero-single-mark{
+        left: 0;
+    }
+    .kl-hero-single-mark{
+        min-height: 542px;
+    }
+    .kl-img-hero-nos-marques{
+        @include media-breakpoint-down(xl){
+            position: absolute;
+            z-index: -1;
+            right: -200px;
+        }
+        @include media-breakpoint-down(md){
+            opacity: 0 !important;
+        }
+    }
+}
+.kl-sect-delices{
+    position: relative;
+    z-index: 9;
+    top: -20px;
+}
+.kl-mask-contain{
+    text-decoration: none;
+    display: block;
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    .btn{
+        @include media-breakpoint-down(xl){
+            height: 75px;
+        }
+        @include media-breakpoint-down(lg){
+            height: 45px;
+        }
+        @include media-breakpoint-down(md){
+            height: 65px;
+        }
+    }
+    &.kl-bg-red{
+        @include mask_img('../images/nos_marques/mask1.png', 100%, 100%);
+        padding: 33px 36px 82px 40px;
+    }
+    &.kl-bg-blue-secondary{
+        @include mask_img('../images/nos_marques/mask2.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-green{
+        @include mask_img('../images/nos_marques/mask3.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-blue{
+        @include mask_img('../images/nos_marques/mask4.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-blue-tertiary{
+        @include mask_img('../images/nos_marques/mask5.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-nos-marques-green{
+        @include mask_img('../images/nos_marques/mask6.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-purple{
+        @include mask_img('../images/nos_marques/mask7.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-marron{
+        @include mask_img('../images/nos_marques/mask8.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-nos-marques-blue{
+        @include mask_img('../images/nos_marques/mask9.png', 100%, 100%);
+        padding: 30px 30px 30px 45px;
+    }
+    &.kl-bg-nos-marques-blue-primary{
+        @include mask_img('../images/nos_marques/mask10.png', 100%, 100%);
+        padding: 30px 30px 30px 30px;
+        max-height: 370px;
+        height: 100%;
+    }
+    &.kl-bg-nos-marques-green-primary{
+        @include mask_img('../images/nos_marques/mask11.png', 100%, 100%);
+        padding: 30px 30px 30px 30px;
+        max-height: 370px;
+        height: 100%;
+    }
+    &.kl-bg-nos-marques-blue-secondary{
+        @include mask_img('../images/nos_marques/mask10.png', 100%, 100%);
+        padding: 30px 30px 30px 30px;
+        max-height: 370px;
+        height: 100%;
+    }
+    &.kl-bg-nos-marques-green-secondary{
+        @include mask_img('../images/nos_marques/mask11.png', 100%, 100%);
+        padding: 30px 30px 30px 30px;
+        max-height: 370px;
+        height: 100%;
+    }
+}
+.kl-hover-link-mask{
+    img{
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+        img{
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+}
+.kl-last-mb-20{
+    @include media-breakpoint-down(lg){
+        margin-bottom: 20px;
+    }
+}

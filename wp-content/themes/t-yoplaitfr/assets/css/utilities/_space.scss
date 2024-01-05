@@ -1,0 +1,110 @@
+$sides: (t:top, b:bottom, l:left, r:right);
+$dirs: (x,y);
+$grid-breakpoints: (xs: 480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
+
+@for $i from 1 through 100{
+  @each $dir in $dirs{
+    .kl-gutter-#{$dir}-#{$i}{
+      --bs-gutter-#{$dir}:#{$i}px !important;
+    }
+  }
+}
+
+@for $i from 1 through 100 {
+  .kl-m-#{$i}{
+    margin: #{$i}px !important;
+  }
+  .kl-mx-#{$i}{
+    margin-left: #{$i}px !important;
+    margin-right: #{$i}px !important;
+  }
+  .kl-my-#{$i}{
+    margin-top: #{$i}px !important;
+    margin-bottom: #{$i}px !important;
+  }
+  .kl-mx-n-#{$i}{
+    margin-right: -#{$i}px !important;
+    margin-left: -#{$i}px !important;
+  }
+  .kl-my-n-#{$i}{
+    margin-top: -#{$i}px !important;
+    margin-bottom: -#{$i}px !important;
+  }
+  .kl-p-#{$i}{
+    padding: #{$i}px !important;
+  }
+  .kl-px-#{$i}{
+    padding-left: #{$i}px !important;
+    padding-right: #{$i}px !important;
+  }
+  .kl-py-#{$i}{
+    padding-top: #{$i}px !important;
+    padding-bottom: #{$i}px !important;
+  }
+  @each $side, $side_values in $sides {
+    .kl-m#{$side}-n-#{$i}{
+      margin-#{$side_values}: -#{$i}px !important;
+    }
+    .kl-m#{$side}-#{$i}{
+      margin-#{$side_values}: #{$i}px !important;
+    }
+    .kl-p#{$side}-#{$i} {
+      padding-#{$side_values}: #{$i}px !important;
+    }
+  }
+}
+
+@each $grid-breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($grid-breakpoint) {
+    @for $i from 1 through 100{
+      @each $dir in $dirs{
+        .kl-gutter-#{$grid-breakpoint}-#{$dir}-#{$i}{
+          --bs-gutter-#{$dir}:#{$i}px !important;
+        }
+      }
+      .kl-m-#{$grid-breakpoint}-#{$i}{
+        padding: #{$i}px !important;
+      }
+      .kl-mx-n-#{$grid-breakpoint}-#{$i}{
+        margin-right: -#{$i}px !important;
+        margin-left: -#{$i}px !important;
+      }
+      .kl-my-n-#{$grid-breakpoint}-#{$i}{
+        margin-top: -#{$i}px !important;
+        margin-bottom: -#{$i}px !important;
+      }
+      .kl-mx-#{$grid-breakpoint}-#{$i}{
+        margin-left: #{$i}px !important;
+        margin-right: #{$i}px !important;
+      }
+      .kl-my-#{$grid-breakpoint}-#{$i}{
+        margin-top: #{$i}px !important;
+        margin-bottom: #{$i}px !important;
+      }
+      .kl-p-#{$grid-breakpoint}-#{$i}{
+        padding: #{$i}px !important;
+      }
+      .kl-px-#{$grid-breakpoint}-#{$i}{
+        padding-left: #{$i}px !important;
+        padding-right: #{$i}px !important;
+      }
+      .kl-py-#{$grid-breakpoint}-#{$i}{
+        padding-top: #{$i}px !important;
+        padding-bottom: #{$i}px !important;
+      }
+    }
+    @for $i from 1 through 100 {
+      @each $side, $side_values in $sides {
+        .kl-m#{$side}-n-#{$grid-breakpoint}-#{$i}{
+          margin-#{$side_values}: -#{$i}px !important;
+        }
+        .kl-m#{$side}-#{$grid-breakpoint}-#{$i} {
+          margin-#{$side_values}: #{$i}px !important;
+        }
+        .kl-p#{$side}-#{$grid-breakpoint}-#{$i} {
+          padding-#{$side_values}: #{$i}px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,480 @@
+.kl-detail-brique {
+  background-color: $yellow;
+  position: relative;
+  padding: 103px 0 125px;
+  overflow: hidden;
+  &::before,
+  &::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    @include media-breakpoint-up(xxl_1440) {
+      background-size: 100% 100%;
+    }
+  }
+  &::before {
+    background-image: url(../images/marque/detail-brique/before-detail-brique.svg);
+    height: 103px;
+    top: -1px;
+  }
+  &::after {
+    background-image: url(../images/marque/detail-brique/after-detail-brique.svg);
+    height: 166px;
+    bottom: -1px;
+  }
+  &-initial {
+    padding-top: 27px;
+    &-image {
+      max-width: 275px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      @include media-breakpoint-up(lg) {
+        max-width: 300px;
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: 338px;
+      }
+    }
+    &-link {
+      position: absolute;
+      &:hover {
+        svg {
+          transform: scale(1.2);
+        }
+      }
+      svg {
+        transition: transform .2s ease-in-out;
+      }
+      img {
+        max-width: 590%;
+        position: absolute;
+        @include media-breakpoint-up(lg) {
+          max-width: 800%;
+        }
+        @include media-breakpoint-up(xl) {
+          max-width: none;
+        }
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+  }
+  &-slider-wrapper {
+    display: none;
+    min-height: 509px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: -60px;
+    }
+    @include media-breakpoint-down(md) {
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+      &.kl-is-visible {
+        opacity: 1;
+      }
+    }
+  }
+  &-slider-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    @include media-breakpoint-up(md) {
+      padding: 44px 0;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 77px;
+    }
+  }
+  &-slider-dots {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 3px;
+      @include media-breakpoint-up(md) {
+        margin: 0 5px;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:nth-child(4n+1) {
+        .kl-detail-brique-slider-dots-btn {
+          &::after {
+            background-image: url(../images/marque/detail-brique/bg-number-1.svg);
+            width: 42px;
+            height: 48px;
+            @include media-breakpoint-down(md) {
+              width: 30px;
+            }
+          }
+        }
+      }
+      &:nth-child(4n+2) {
+        .kl-detail-brique-slider-dots-btn {
+          &::after {
+            background-image: url(../images/marque/detail-brique/bg-number-2.svg);
+            width: 44px;
+            height: 51px;
+            @include media-breakpoint-down(md) {
+              width: 32px;
+            }
+          }
+        }
+      }
+      &:nth-child(4n+3) {
+        .kl-detail-brique-slider-dots-btn {
+          &::after {
+            background-image: url(../images/marque/detail-brique/bg-number-3.svg);
+            width: 47px;
+            height: 50px;
+            @include media-breakpoint-down(md) {
+              width: 34px;
+            }
+          }
+        }
+      }
+      &:nth-child(4n+4) {
+        .kl-detail-brique-slider-dots-btn {
+          &::after {
+            background-image: url(../images/marque/detail-brique/bg-number-4.svg);
+            width: 52px;
+            height: 49px;
+            @include media-breakpoint-down(md) {
+              width: 35px;
+            }
+          }
+        }
+      }
+      
+      &.slick-active {
+        .kl-detail-brique-slider-dots-btn {
+          color: $white;
+        }
+        @for $i from 1 through 4 {
+          &:nth-child(4n+#{$i}) {
+            .kl-detail-brique-slider-dots-btn {
+              &::after {
+                background-image: url(../images/marque/detail-brique/bg-number-#{$i}-red.svg);
+              }
+            }
+          }
+        }
+      }
+    }
+    &-btn {
+      background: none;
+      border: none;
+      color: $red;
+      display: inline-block;
+      font-family: $chewyPro;
+      font-size: 24px;
+      line-height: 1;
+      padding: 0;
+      position: relative;
+      transition: transform .2s ease-in-out;
+      @include media-breakpoint-up(md) {
+        font-size: 36px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+      }
+      span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &-slider-arrow {
+    background: none;
+    border: none;
+    display: inline-block;
+    padding: 0;
+    &:hover {
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+    svg path {
+      transition: all .15s ease-in-out;
+    }
+  }
+  &-slider-prev {
+    margin-right: 12px;
+    @include media-breakpoint-up(md) {
+      margin-right: 24px;
+    }
+  }
+  &-slider-next {
+    margin-left: 12px;
+    @include media-breakpoint-up(md) {
+      margin-left: 24px;
+    }
+  }
+  &-slider {
+    @include media-breakpoint-up(lg) {
+      .slick-track {
+        display: flex;
+      }
+      .slick-slide {
+        height: auto;
+      }
+      .slick-list {
+        overflow: visible;
+      }
+    }
+    &-item {
+      &:nth-child(1) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            right: -10%;
+            top: -8%;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            max-width: 505px;
+            right: 20%;
+            top: 50%;
+            transform: translateY(-66.25%);
+          }
+        }
+      }
+      &:nth-child(3) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            max-width: 843px;
+            right: -10%;
+            bottom: 50%;
+            transform: translateY(70%);
+          }
+        }
+      }
+      &:nth-child(4) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            max-width: 764px;
+            right: 1%;
+            bottom: 50%;
+            transform: translateY(48%);
+          }
+        }
+      }
+      &:nth-child(5) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            max-width: 817px;
+            right: -11%;
+            bottom: 50%;
+            transform: translateY(24%);
+          }
+        }
+      }
+      &:nth-child(6) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            max-width: 750px;
+            right: -2%;
+            bottom: 21%;
+          }
+        }
+      }
+      &:nth-child(7) {
+        .kl-detail-brique-slider-item-col-img {
+          img {
+            right: 6%;
+            bottom: 17%;
+          }
+        }
+      }
+      &-col-img {
+        position: relative;
+        display: none;
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+        img {
+          position: absolute;
+          z-index: -1;
+        }
+      }
+      > .row {
+        @include media-breakpoint-up(lg) {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.kl-detail-link {
+  &-1 {
+    top: 1.5%;
+    left: 10%;
+    img {
+      top: 50%;
+      left: 0;
+      transform: translate(-100%, -50%);
+    }
+  }
+  &-2 {
+    top: 11.5%;
+    right: 6%;
+    img {
+      top: 50%;
+      right: 0;
+      transform: translate(103%, -32%);
+    }
+  }
+  &-3 {
+    top: 18%;
+    left: 28%;
+    img {
+      top: 50%;
+      left: 0;
+      transform: translate(-104%, -26%);
+    }
+  }
+  &-4 {
+    top: 48%;
+    right: 29%;
+    img {
+      top: 50%;
+      right: 0;
+      transform: translate(100.5%, -29%);
+    }
+  }
+  &-5 {
+    bottom: 27%;
+    left: 28%;
+    img {
+      top: 50%;
+      left: 0;
+      transform: translate(-102%, -81%);
+    }
+  }
+  &-6 {
+    bottom: 12%;
+    left: 0;
+    img {
+      top: 50%;
+      left: 0;
+      transform: translate(-98%, -60%);
+    }
+  }
+  &-7 {
+    bottom: 4.5%;
+    right: 17.5%;
+    img {
+      top: 50%;
+      right: 0;
+      transform: translate(100%, -48%);
+    }
+  }
+}
+
+.kl-block-eco {
+  display: flex;
+  align-items: center;
+  &-img {
+    flex: 0 0 75px;
+    padding-right: 18px;
+    @include media-breakpoint-up(md) {
+      flex-basis: 100px;
+      padding-right: 22px;
+    }
+  }
+  &-text {
+    flex: 1 1 auto;
+  }
+}
+.kl-return-to-detail-brique {
+  display: inline-block;
+  margin-top: -20px;
+  position: relative;
+  transition: all .15s ease-in-out;
+  z-index: 3;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.kl-order-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 18px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: contain;
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 34px;
+      height: 38px;
+    }
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        &::before {
+          background-image: url(../images/marque/detail-brique/list-style-#{$i}.svg);
+        }
+      }
+    }
+  }
+}
+
+.kl-unorder-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    padding-left: 42px;
+    position: relative;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "";
+      background: url(../images/marque/detail-brique/list-style-coeur.svg) no-repeat left top / contain;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 32px;
+      height: 27px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@include media-breakpoint-up(md){
+  .kl-col-md-38-perc{
+    width: 38%;
+  }
+  .kl-col-md-40-perc{
+    width: 40%;
+  }
+  .kl-col-md-45-perc{
+    width: 45%;
+  }
+  .kl-col-md-60-perc{
+    width: 60%;
+  }
+  .kl-col-md-62-perc{
+    width: 62%;
+  }
+  .kl-col-md-90-perc{
+    width: 90%;
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .kl-col-xl-37-prec{
+    width: 37%;
+  }
+  .kl-col-xl-45-perc{
+    width: 45%;
+  }
+  .kl-col-xl-46-perc{
+    width: 46%;
+  }
+  .kl-col-xl-54-perc{
+    width: 54%;
+  }
+  .kl-col-xl-55-perc{
+    width: 55%;
+  }
+  .kl-col-xl-55-perc{
+    width: 55%;
+  }
+  .kl-col-xl-56-perc{
+    width: 56%;
+  }
+}
+
+@include media-breakpoint-up(xxl){
+  .kl-col-xxl-38-perc{
+    width: 38%;
+  }
+  .kl-col-xxl-40-perc{
+    width: 40%;
+  }
+}

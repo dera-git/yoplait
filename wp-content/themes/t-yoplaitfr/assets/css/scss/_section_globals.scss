@@ -1,0 +1,83 @@
+.kl-section-default-desc{
+  padding: 120px 0 260px;
+  position: relative;
+  .kl-decor-left-ctx{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    .kl-decor{
+      position: absolute;
+      left: 52px;
+      bottom: 90px;
+    }
+  }
+  .kl-decor-right-ctx{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+}
+
+.kl-ctx-company{
+  padding-bottom:73px;
+  background-image: url(../images/join-us/bg-desc-company.png);
+  .kl-ctx-company-item{
+    padding: 115px 150px 95px 150px ;
+    transform: translateY(-25px);
+  }
+  .kl-info{
+    width: 100%;
+    max-width: 549px;
+  }
+}
+
+@include media-breakpoint-down(xl){
+  .kl-ctx-company{
+    .kl-ctx-company-item{
+      padding: 75px 100px 75px 100px ;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg){
+  .kl-ctx-company{
+    padding-bottom:50px;
+    .kl-info{
+      max-width: 75%;
+    }
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-ctx-company{
+    .kl-ctx-company-item{
+      padding: 75px 50px 75px 50px ;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .kl-section-default-desc{
+    padding: 75px 0 75px;
+    .kl-decor-right-ctx{
+      width: 200px;
+      svg{
+        max-width: 100%;
+      }
+    }
+  }
+  .kl-ctx-company{
+    background-image: none;
+    .kl-info{
+      max-width: 100%;
+    }
+    .kl-btn-decor.kl-btn-green-primary{
+      &:before{
+        background: url(../images/svg-globals/decor-btn.svg) no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "var";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "font";
+@import "text";
+@import "mixin";
+@import "breadcrumb";
+@import "globals";
+@import "card";
+@import "custom_col";
+@import "mask_element";
+@import "section_globals";
+@import "custom_width";
+@import "social_network";
+@import "slider";
+@import "media";
+@import "button";
+@import "hero";
+@import "header";
+@import "footer";
+@import "home";
+@import "join_us";
+@import "single_product";
+@import "single_article";
+@import "about";
+@import "map";
+@import "mark";
+@import "news";
+@import "responsive";
+@import "modal";
+
+@import "./page/tornado_single_produit";
+@import "./page/single_gamme";
+@import "./page/yoplait_rse";
+@import "./page/custom_home";
+@import "./page/marque";
+@import  "./page/news";
+@import "./page/ofa";
+@import "./page/single_marque";
+@import "./page/nos_marques";
+@import "./page/jeu_concours";
+@import "./page/contact";
+@import "./page/promotions";
+
+
+.kl-wrapper-globals{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.kl-footer{
+  margin-top: auto;
+}
+
+body{
+  font-family: $font-primary;
+  p{
+    color: $black;
+  }
+}

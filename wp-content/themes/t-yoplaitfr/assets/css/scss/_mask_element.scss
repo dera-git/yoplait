@@ -1,0 +1,165 @@
+.kl-img-max-product{
+  .kl-figure{
+    position: relative;
+    padding: 0 8% 0 11%;
+    .kl-decor{
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      img{
+        width: 100%;
+      }
+    }
+    .kl-img-mask{
+      @include mask_img('../images/mask/mask-product-women.png', 100%, 100%);
+      position: relative;
+      z-index: 5;
+      margin-left: 15px;
+    }
+  }
+}
+
+.kl-flours-figure{
+  .kl-figure{
+    .kl-img-mask{
+      @include mask_img('../images/mask/img-mask-flw-01.png', 100%, 100%);
+    }
+  }
+}
+
+.kl-msk-img-cli{
+  position: relative;
+  .kl-figure{
+    position: relative;
+    display: inline-block;
+    .kl-img{
+      @include mask_img('../images/mask/msk-img-cli-01.png', 100%, 100%);
+    }
+  }
+  .kl-decor{
+    position: absolute;
+    right: -45%;
+    bottom: -40px;
+    z-index: -1;
+  }
+}
+
+.kl-img-hs-right{
+  .kl-figure .kl-img{
+    @include mask_img('../images/mask/mask-hs-1.png', 100%, 100%);
+  }
+}
+
+.kl-img-hs-left{
+  .kl-figure .kl-img{
+    @include mask_img('../images/mask/mask-hs-2.png', 100%, 100%);
+  }
+}
+
+.kl-img-msk-advantage{
+  figure .kl-img{
+    @include mask_img('../images/mask/mask-img-flowers.png', 100%, 100%);
+  }
+}
+
+.kl-hs-img-merge{
+  .kl-figure-top .kl-img{
+    @include mask_img('../images/mask/mask-hs-4.png', 100%, 100%);
+  }
+  .kl-figure-bottom {
+    position: relative;
+    .kl-decor-flowers{
+      position: absolute;
+      bottom: -30px;
+      width: 78px;
+      left: 50%;
+      transform: translateX(-50%);
+      img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .kl-img{
+      @include mask_img('../images/mask/mask-hs-3.png', 100%, 100%);
+    }
+  }
+}
+
+.kl-jb-left-figure{
+  .kl-figure{
+    position: relative;
+    .kl-decor{
+      position: absolute;
+      left: 0;
+      height: 100%;
+      @include media-breakpoint-down(lg){
+        max-width: 80%;
+      }
+    }
+  }
+  .kl-img{
+    @include mask_img('../images/mask/msk-jb-left.png', 100%, 100%);
+  }
+}
+
+.kl-jb-right-figure{
+  .kl-figure{
+    position: relative;
+    .kl-decor{
+      position: absolute;
+      right: 0;
+      bottom: 10%;
+      @include media-breakpoint-down(lg){
+        max-width: 160px;
+      }
+    }
+  }
+  .kl-img{
+    @include mask_img('../images/mask/msk-img-jb-right.png', 100%, 100%);
+  }
+}
+
+.kl-img-prt-ter{
+  .kl-figure{
+    position: relative;
+    margin-bottom: 0;
+    .kl-bg-figure{
+      position: absolute;
+      bottom: -5%;
+      left: -15%;
+      z-index: -2;
+    }
+    .kl-mask-img{
+      @include mask_img('../images/mask/mask-img-ter.png', 100%, 100%);
+    }
+  }
+}
+
+.kl-figure-src-prod{
+  position: relative;
+  display: inline-block;
+  padding: 0 0 25px 0;
+  img{
+    object-fit: cover;
+  }
+  .kl-mask-img{
+    @include mask_img('../images/mask/mask-img-beef.png', 100%, 100%);
+  }
+  .kl-bg-figure{
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    z-index: -1;
+  }
+  @include media-breakpoint-down(xl){
+    padding: 0 50px 25px 0;
+    .kl-bg-figure{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+}

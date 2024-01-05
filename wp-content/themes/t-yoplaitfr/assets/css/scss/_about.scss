@@ -1,0 +1,296 @@
+.kl-section-hero-a-propos {
+  margin-bottom: 27px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -60px;
+  }
+  & + .kl-section-about-desc {
+    @include media-breakpoint-up(xl) {    
+      padding: 120px 0 235px;
+    }
+    .kl-decor-left-ctx {
+      bottom: -60px;
+    }
+  }
+}
+.kl-row-desc-ter{
+  position: relative;
+  .kl-desc-territorial{
+    position: relative;
+    z-index: 5;
+    p{
+      line-height: 1.5em;
+    }
+  }
+  .kl-img-prt-ter{
+    @include media-breakpoint-up(xl){
+      position: absolute;
+      top: -17px;
+      z-index: -1;
+      right: 0;
+    }
+    @include media-breakpoint-up(xxl){
+      right: -5%;
+    }
+  }
+}
+
+.kl-section-map-interact{
+  font-weight: $semi_bold;
+  position: relative;
+  .kl-decor-left{
+    position: absolute;
+    left: 0;
+    bottom: 18%;
+    z-index: -1;
+    @include media-breakpoint-down(lg){
+      max-width: 200px;
+    }
+  }
+  .kl-decor-right{
+    position: absolute;
+    right: 0;
+    bottom: 26%;
+    z-index: -1;
+    @include media-breakpoint-down(lg){
+      svg{
+        max-width: 150px;
+      }
+    }
+    .kl-decor-sm{
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      z-index: -2;
+    }
+  }
+  .kl-info-map{
+    p{
+      @extend %text_36;
+      line-height: 1.2em;
+    }
+  }
+  .kl-desc{
+    p{
+      line-height: 1.5em;
+    }
+  }
+}
+
+.kl-section-yop-about-desc{
+  position: relative;
+  z-index: 5;
+  .kl-default-ctx-stf{
+    h2{
+      @extend %text_61;
+    }
+  }
+  .kl-bg-yop-desc{
+    padding: 146px 100px 133px;
+    background: url(../images/about/bg-about-desc.png) no-repeat center;
+    background-size: 100% 100%;
+    @include media-breakpoint-down(md){
+      padding: 100px 40px 100px;
+      background-size: cover;
+    }
+    @include media-breakpoint-down(sm){
+      padding: 80px 25px 80px;
+    }
+    @include media-breakpoint-down(xs){
+      padding: 80px 15px 80px;
+    }
+  }
+}
+
+.kl-yop-about-desc{
+  p{
+    line-height: 1.27em;
+  }
+  .kl-title{
+    .kl-icon{
+      margin-right: 21px;
+      position: relative;
+      top: -3px;
+      @include media-breakpoint-down(md){
+        margin-right: 15px;
+      }
+    }
+    h3{
+      @extend %text_36;
+      font-weight: $semi_bold;
+      line-height: 1.2em;
+    }
+  }
+  .kl-about-text{
+    h5{
+      @extend %text_24;
+      line-height: 1.1em;
+      font-weight: $semi_bold;
+    }
+  }
+  .kl-yop-about-item{
+    position: relative;
+    z-index: 10;
+
+    p{
+      line-height: 1.27em;
+    }
+  }
+}
+
+.kl-section-media-video{
+  padding: 60px 0 90px;
+}
+
+.kl-media-photo-prt{
+  position: relative;
+  .kl-decor-left{
+    position: absolute;
+    left: 0;
+    top: 28%;
+    transform: translateY(-28%);
+    z-index: -1;
+  }
+  .kl-decor-right{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    z-index: -1;
+  }
+  @include media-breakpoint-down(xl){
+    .kl-decor-left, .kl-decor-right{
+      img{
+        width: 150px;
+      }
+      svg{
+        width: 200px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg){
+    .kl-decor-left{
+      top: -100px;
+    }
+    .kl-decor-right{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .kl-decor-left, .kl-decor-right{
+      width: 150px;
+      svg{
+        width: 150px;
+      }
+    }
+  }
+}
+
+.kl-section-photo-thumb{
+  padding: 120px 0 140px;
+  position: relative;
+}
+
+.kl-section-about-coop{
+  padding: 190px 0 160px;
+  background: url(../images/about/bg-yop-coop.svg) no-repeat top center/cover;
+  @include media-breakpoint-up(xxl_1440){
+    padding-bottom: 320px
+  }
+}
+
+.kl-about-coop{
+  .kl-title{
+    h3{
+      @extend %text_36;
+      font-weight: $bold;
+    }
+  }
+  p{
+    line-height: 1.38em;
+  }
+}
+
+.kl-about-coop-item{
+  align-items: center;
+  .kl-icon{
+    flex: 0 0 auto;
+    margin-right: 24px;
+  }
+  h6{
+    @extend %text-18;
+    line-height: 1.16em;
+    margin-bottom: 0;
+  }
+}
+
+.kl-section-src-nt{
+  position: relative;
+  z-index: 5;
+}
+
+.kl-figure-yop-cart{
+  position: relative;
+  .kl-aft-cart{
+    position: absolute;
+    left: -30px;
+    bottom: -50px;
+    z-index: -1;
+    @include media-breakpoint-down(lg){
+      max-width: 150px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl){
+  .kl-section-about-territorial{
+    .kl-default-ctx-stf{
+      h2{
+        font-size: 50px;
+        line-height: 1.2em;
+      }
+    }
+  }
+  .kl-section-about-coop{
+    padding: 120px 0 160px;
+  }
+  .kl-section-about-desc{
+    padding-bottom: 100px;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-row-desc-ter{
+    .kl-img-prt-ter{
+      max-width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+  .kl-section-media-video{
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+  .kl-section-photo-thumb{
+    padding: 60px 0 60px;
+  }
+  .kl-section-about-coop{
+    padding: 80px 0 24px;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .kl-section-about-desc{
+    padding-bottom: 50px;
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .kl-section-about-territorial{
+    .kl-row-desc-ter{
+      .kl-col-img{
+        min-height: 500px;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.kl-section-hero-mark{
+  padding: 105px 0 130px;
+}
+
+.kl-section-mark{
+  padding: 70px 0 150px;
+}
+
+@include media-breakpoint-down(xl){
+  .kl-section-hero-mark{
+    padding: 90px 0 100px;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-section-hero-mark{
+    background-size: cover;
+    padding: 75px 0 75px;
+  }
+  .kl-section-mark{
+    padding: 50px 0 100px;
+  }
+}

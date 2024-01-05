@@ -1,0 +1,392 @@
+/* each colors */
+@each $color, $value in $theme_colors {
+  .kl-color-#{$color} {
+    @include color_theme($value);
+    p{
+      @include color_theme($value);
+    }
+  }
+  .kl-bg-#{$color} {
+    @include bg_theme($value);
+  }
+  .kl-active-#{$color}{
+    &:hover,
+    &.active{
+      @include bg_theme($value);
+    }
+  }
+  .kl-before-#{$color} {
+    &:before{
+      @include bg_theme($value);
+    }
+  }
+}
+
+//font familly
+@each $name, $value in $font_familly {
+  .kl-ff-#{$name} {
+    @include font_familly($value);
+    h1, h2, h3, h4, p{
+      @include font_familly($value);
+    }
+  }
+}
+
+//font weight
+@each $name, $value in $font_weight {
+  .kl-fw-#{$name} {
+    @include font_weight($value);
+    h1, h2, h3, h4{
+      @include font_weight($value);
+    }
+  }
+}
+
+//line-height
+@each $val, $value in $line_height {
+  .kl-lh-#{$val} {
+    @include line_height($value);
+    h2,h3{
+      @include line_height($value);
+    }
+  }
+}
+
+//z-index
+@each $val in $z_index {
+  .kl-z-index-#{$val} {
+    z-index: #{$val};
+  }
+}
+
+@each $color, $value in $theme_colors {
+  .kl-hs-desc-#{$color} {
+    @include hs_desc_var($value);
+    h2{
+      @extend %text_36;
+      font-weight: 700;
+      line-height: 43px;
+      margin-bottom: 25px;
+      i{
+        margin-right: 20px;
+      }
+    }
+    p{
+      margin-bottom: 25px;
+    }
+  }
+}
+
+//max-width , space margin padding and gutter breakpoint
+@each $space, $value_space in $max_value{
+  .kl-max-w-#{$space}{
+    max-width: #{$value_space};
+  }
+  .kl-min-w-#{$space}{
+    min-width: #{$value_space};
+  }
+}
+
+@each $space, $value_space in $spacing{
+  .kl-gx-#{$space}{
+    --bs-gutter-x: #{$value_space};
+  }
+  .kl-gy-#{$space}{
+    --bs-gutter-y: #{$value_space};
+  }
+  @each $side_value, $side_values in $sides-direction{
+    .kl-m#{$side_value}-#{$space}{
+      margin-#{$side_values}:#{$value_space} !important;
+    }
+    .kl-m#{$side_value}-n-#{$space}{
+      margin-#{$side_values}: -#{$value_space} !important;
+    }
+    .kl-p#{$side_value}-#{$space}{
+      padding-#{$side_values}: #{$value_space} !important;
+    }
+  }
+}
+
+//max-width , space margin padding and gutter breakpoint
+@each $breakpoint in map-keys($bs-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @each $space, $value_space in $max_value{
+      .kl-max-w-#{$breakpoint}-#{$space}{
+        max-width: #{$value_space};
+      }
+      .kl-min-w-#{$breakpoint}-#{$space}{
+        min-width: #{$value_space};
+      }
+    }
+    @each $space, $value_space in $spacing{
+      .kl-gx-#{$breakpoint}-#{$space}{
+        --bs-gutter-x: #{$value_space};
+      }
+      .kl-gy-#{$breakpoint}-#{$space}{
+        --bs-gutter-y: #{$value_space};
+      }
+      @each $side_value, $side_values in $sides-direction{
+        .kl-m#{$side_value}-#{$breakpoint}-#{$space}{
+          margin-#{$side_values}: #{$value_space} !important;
+        }
+        .kl-p#{$side_value}-#{$breakpoint}-#{$space}{
+          padding-#{$side_values}: #{$value_space} !important;
+        }
+      }
+    }
+  }
+}
+
+.kl-defaul-breadcrumb{
+  li, a{
+    @extend %text_24;
+    line-height: 1.2em;
+    color: $black !important;
+  }
+  .breadcrumb-item + .breadcrumb-item:before{
+    color: $black;
+  }
+}
+
+p{
+  @extend %text-18;
+  line-height: 1.22em;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+}
+
+.kl-text-14{
+  @extend %text_14;
+}
+
+.kl-title-stf{
+  h2{
+    @extend %text_80;
+    font-family: $third_font;
+    font-weight: $regular;
+  }
+}
+
+.kl-default-ctx-stf{
+  &.kl-cust-ln-title{
+    h1, h2{
+      line-height: 1.43em;
+    }
+  }
+  .kl-title{
+    margin-bottom: 28px;
+  }
+  h1, h2{
+    @extend %text_80;
+    font-family: $third_font;
+    font-weight: $regular;
+  }
+  p{
+    line-height: 28px;
+  }
+  strong{
+    font-weight: 600;
+  }
+  .kl-subtitle{
+    h3{
+      @extend %text_36;
+      font-weight: $regular;
+    }
+  }
+}
+
+.kl-filter-tag-nws{
+  background: url(../images/news/bg-link-filter.svg) no-repeat;
+  background-size: cover;
+  .kl-filter-list{
+    margin-bottom: 0;
+    overflow: auto;
+    padding: 79px 20px 79px;
+    text-align: center;
+    white-space: nowrap;
+    & > li{
+      display: inline-block;
+    }
+    @include media-breakpoint-down(lg){
+      padding: 59px 20px 59px;
+    }
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    .kl-filter-list-item{
+      margin-right: 44px;
+      display: inline-block;
+      @include media-breakpoint-down(md){
+        margin-right: 30px;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    a{
+      color: $white;
+      @extend %text_20;
+      text-transform: uppercase;
+      position: relative;
+      &.active{
+        font-weight: $extra_bold;
+      }
+      &:before{
+        position: absolute;
+        content: "";
+        width: 36px;
+        height: 37px;
+        top: -21px;
+        left: -21px;
+        background: url(../images/news/flower.svg) no-repeat center/contain;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+      }
+      &:hover{
+        &:before{
+          opacity: 1;
+        }
+      }
+      &.active{
+        &:before{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.kl-animate-scroll:not(.animate__animated){
+  opacity: 0;
+}
+
+.kl-bg-default{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+@include media-breakpoint-down(sm){
+  .kl-default-ctx-stf{
+    .kl-title{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md){
+  .kl-w-md-100{
+    width: 100%;
+  }
+  .kl-mt-md-180{
+    margin-top: 180px;
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .kl-pl-lg-6-perc{
+    padding-left: 6%;
+  }
+}
+
+button{
+  &:focus-visible{
+    outline: none !important;
+  }
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+
+.kl-lh-22{
+  p{
+    line-height: 22px;
+  }
+}
+
+.kl-img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kl-img-contain{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kl-el-mb{
+  p,h3{
+    margin-bottom: 0;
+  }
+}
+
+.kl-opacity-0{
+  opacity: 0;
+}
+
+.kl-cursor-pointer{
+  cursor: pointer;
+}
+
+.kl-transform--3{
+  transform: rotate(-3deg);
+}
+
+@keyframes draw_svg {
+  0% {
+    stroke-dashoffset: 2300;
+  }
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+
+%stroke{
+  stroke-dasharray: 2300;
+  stroke-dashoffset: 2300;
+}
+%stroke-animate{
+  stroke-dashoffset: 0;
+  animation: draw_svg 5s ease-in;
+}
+
+.kl-animate-line-svg .kl-svg-animated svg path,
+.kl-animate-line-svg.kl-svg-animated svg path,
+.kl-animate-border01 svg polyline,
+.kl-animate-border02 svg polyline,
+.kl-animate-border03 svg polyline {
+  @extend %stroke;
+}
+
+.kl-animate-line-svg .kl-svg-animated svg path.kl-play,
+.kl-animate-line-svg.kl-svg-animated svg path.kl-play,
+.kl-animate-border01 svg polyline.kl-play,
+.kl-animate-border02 svg polyline.kl-play,
+.kl-animate-border03 svg polyline.kl-play {
+  @extend %stroke-animate;
+}
+
+.kl-svg-anim-line-brands.kl-svg-line-brands svg path.kl-play{
+  stroke-dashoffset: 0;
+  animation: draw_svg 3.5s ease-in;
+}
+
+.js-animate-intro-img,
+.js-img-commitments,
+.js-img-JoinUs{
+  svg{
+    opacity: 0;
+    transition: opacity .3S;
+  }
+}
+.kl-animate-border01.js-animate-intro-img,
+.kl-animate-border02.js-img-commitments,
+.kl-animate-border03.js-img-JoinUs{
+  svg{
+    opacity: 1;
+  }
+}

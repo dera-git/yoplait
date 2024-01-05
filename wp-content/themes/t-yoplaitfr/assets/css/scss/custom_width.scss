@@ -1,0 +1,85 @@
+.kl-mw-780{
+  width: 100%;
+  max-width: 780px;
+}
+
+.kl-mw-740{
+  width: 100%;
+  max-width: 740px;
+}
+
+.kl-mw-700{
+  width: 100%;
+  max-width: 700px;
+}
+
+.kl-mw-580{
+  width: 100%;
+  max-width: 580px;
+}
+
+.kl-mw-564{
+  width: 100%;
+  max-width: 564px;
+}
+
+.kl-mw-617{
+  width: 100%;
+  max-width: 617px;
+}
+
+.kl-mw-658 {
+  width: 100%;
+  max-width: 658px;
+}
+
+.kl-mw-660{
+  width: 100%;
+  max-width: 680px;
+}
+
+.kl-mw-950{
+  width: 100%;
+  max-width: 950px;
+}
+
+.kl-mw-811{
+  width: 100%;
+  max-width: 811px;
+}
+
+.kl-mw-924{
+  width: 100%;
+  max-width: 924px;
+}
+
+.kl-mw-1058{
+  width: 100%;
+  max-width: 1058px;
+}
+
+.kl-min-w-229 {
+  min-width: 229px;
+}
+
+@include media-breakpoint-down(lg){
+
+}
+
+@include media-breakpoint-up(lg){
+  .kl-w-lg-88-perc{
+    width: 88%;
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .kl-mw-xl-71-perc{
+    width: 71%;
+  }
+  .kl-mw-xl-83-perc{
+    width: 83%;
+  }
+  .kl-mw-xl-85-perc{
+    width: 85%;
+  }
+}

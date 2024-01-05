@@ -1,0 +1,329 @@
+%text_80{
+  font-size: 80px;
+  line-height: 1.2125em;
+}
+%text_72{
+  font-size: 72px;
+  line-height: 1.3em;
+  @include media-breakpoint-down(md){
+    font-size: 52px;
+    line-height: 1em;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 41px;
+    line-height: 1em;
+  }
+}
+%text_69{
+  font-size: 69px;
+  line-height: 1em;
+  @include media-breakpoint-down(md){
+    font-size: 50px;
+    line-height: 1em;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 39px;
+    line-height: 1em;
+  }
+}
+%text_66{
+  font-size: 66px;
+  line-height: 1.3em;
+  @include media-breakpoint-down(md){
+    font-size: 44px;
+    line-height: 1em;
+  }
+}
+%text_64{
+  font-size: 64px;
+  line-height: 1.3em;
+  @include media-breakpoint-down(md){
+    font-size: 44px;
+    line-height: 1em;
+  }
+}
+%text_61{
+  font-size: 61px;
+  line-height: 1.3em;
+}
+%text_58{
+  font-size: 58px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(md){
+    font-size: 44px;
+  }
+}
+%text_54{
+  font-size: 54px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(md){
+    font-size: 42px;
+  }
+}
+%text_52{
+  font-size: 52px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(md){
+    font-size: 41px;
+  }
+}
+%text_48{
+  font-size: 48px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(md){
+    font-size: 36px;
+  }
+}
+%text_44{
+  font-size: 44px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(md){
+    font-size: 36px;
+  }
+}
+%text_42{
+  font-size: 42px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(md){
+    font-size: 36px;
+  }
+}
+%text_40{
+  font-size: 40px;
+  line-height: 1.2em;
+  @include media-breakpoint-down(md){
+    font-size: 34px;
+  }
+}
+%text_38{
+  font-size: 38px;
+  line-height: 1.2em;
+  @include media-breakpoint-down(md){
+    font-size: 32px;
+  }
+}
+%text_36{
+  font-size: 36px;
+  line-height: 1.2em;
+}
+%text_34{
+  font-size: 34px;
+  line-height: 1.25em;
+}
+%text_33{
+  font-size: 33px;
+  line-height: 1.15em;
+}
+%text_32{
+  font-size: 32px;
+  line-height: 1.5em;
+}
+%text_28{
+  font-size: 28px;
+  line-height: 1.5em;
+}
+%text_26{
+  font-size: 26px;
+  line-height: 1.25em;
+  @include media-breakpoint-down(sm){
+    font-size: 24px;
+  }
+}
+%text_24{
+  font-size: 24px;
+  line-height: 29px;
+}
+%text_22{
+  font-size: 22px;
+  line-height: 29px;
+}
+%text_20{
+  font-size: 20px;
+  line-height: 1.2em;
+}
+%text-18{
+  font-size: 18px;
+  line-height: 1.5em;
+}
+%text_16{
+  font-size: 16px;
+  line-height: 1.3em;
+}
+%text_14{
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.kl-text-72{
+  @extend %text_72;
+  h1, h2{
+    @extend %text_72;
+    margin-bottom: 0
+  }
+}
+.kl-text-69{
+  @extend %text_69;
+  h1, h2{
+    @extend %text_69;
+    margin-bottom: 0
+  }
+}
+.kl-text-66{
+  @extend %text_66;
+  h2{
+    @extend %text_66;
+    margin-bottom: 0
+  }
+}
+.kl-text-64{
+  @extend %text_64;
+  h2{
+    @extend %text_64;
+    margin-bottom: 0
+  }
+}
+.kl-text-58{
+  @extend %text_58;
+  h1, h2, p{
+    @extend %text_58;
+    margin-bottom: 0
+  }
+}
+.kl-text-54{
+  @extend %text_54;
+  h1, h2, p{
+    @extend %text_54;
+    margin-bottom: 0
+  }
+}
+.kl-text-52{
+  @extend %text_52;
+  h1, h2, p{
+    @extend %text_52;
+    margin-bottom: 0
+  }
+}
+.kl-text-48{
+  @extend %text_48;
+  h2, h3, h4, p{
+    @extend %text_48;
+    margin-bottom: 0
+  }
+}
+.kl-text-44{
+  @extend %text_44;
+  h2, h3, h4, p{
+    @extend %text_44;
+    margin-bottom: 0
+  }
+}
+.kl-text-42{
+  @extend %text_42;
+  h2, h3, h4{
+    @extend %text_42;
+    margin-bottom: 0
+  }
+}
+.kl-text-40{
+  @extend %text_40;
+  h2, h3, h4, p, span{
+    @extend %text_40;
+    margin-bottom: 0
+  }
+}
+.kl-text-38{
+  @extend %text_38;
+  h2, h3, h4, p{
+    @extend %text_38;
+    margin-bottom: 0
+  }
+}
+.kl-text-36{
+  @extend %text_36;
+  h2, h3, h4, p{
+    @extend %text_36;
+    margin-bottom: 0
+  }
+}
+.kl-text-34{
+  @extend %text_34;
+  h1, h2, p{
+    @extend %text_34;
+    margin-bottom: 0
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 28px;
+  }
+}
+.kl-text-33{
+  @extend %text_33;
+  h1, h2, p{
+    @extend %text_33;
+    margin-bottom: 0
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 28px;
+  }
+}
+.kl-text-32{
+  @extend %text_32;
+  @include media-breakpoint-down(sm){
+    font-size: 28px;
+  }
+}
+.kl-text-28{
+  @extend %text_28;
+  p{
+    @extend %text_28;
+    margin-bottom: 0
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 26px;
+  }
+}
+.kl-text-26{
+  @extend %text_26;
+  p{
+    @extend %text_26;
+  }
+}
+.kl-text-24{
+  @extend %text_24;
+  h3, p{
+    @extend %text_24;
+  }
+}
+.kl-text-22{
+  @extend %text_22;
+  p{
+    @extend %text_22;
+  }
+}
+.kl-text-20{
+  @extend %text_20;
+  p{
+    @extend %text_20;
+  }
+}
+
+.kl-text-18{
+  @extend %text-18;
+  p{
+    @extend %text-18;
+  }
+}
+
+.kl-text-16{
+  @extend %text_16;
+  p, li{
+    @extend %text_16;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+.kl-text-14{
+  @extend %text_14;
+  p, li{
+    @extend %text_14;
+  }
+}

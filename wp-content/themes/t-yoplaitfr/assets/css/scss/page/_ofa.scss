@@ -1,0 +1,265 @@
+.kl-sect-banner-ofa{
+    margin-top: -50px;
+    min-height: 608px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    @include media-breakpoint-down(lg) {
+        background-position: 25% 0 !important;
+    }
+}
+
+.kl-bg-line-yellow{
+    background: url("../images/ofa/bg_yellow.png") no-repeat;
+    background-position: center bottom;
+    padding: 200px 0 30px;
+    @include media-breakpoint-down(md){
+        background-size: 100%;
+    }
+}
+.kl-bg-line-yellow-sm{
+    background: url("../images/ofa/bg-yellow-trace-sm.svg") no-repeat;
+    background-position: center bottom;
+    padding: 0 0 30px;
+    @include media-breakpoint-down(md){
+        background-size: 100%;
+    }
+}
+.kl-link-fixed{
+    position: fixed;
+    z-index: 11;
+    top: 300px;
+    right: -30px;
+    transition: all 0.3s ease-in-out;
+    @include media-breakpoint-down(md){
+        right: -140px;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+        @include media-breakpoint-down(md){
+            right: -30px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.kl-logo-ofa{
+    position: absolute;
+    left: 130px;
+    bottom: -230px;
+    z-index: 9;
+}
+
+.kl-sect-our-diet{
+    position: relative;
+    padding: 80px 0 40px;
+    margin-bottom: -10px;
+    &::before{
+        content: "";
+        background: url("../images/ofa/deco-banner1.svg") no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 170px;
+        position: absolute;
+        top: -130px;
+        @media (min-width: 1920.98px) {
+            height: 200px;
+            top: -190px;
+        }
+    }
+    &::after{
+        content: "";
+        background: url("../images/ofa/bg-white-bottom.svg") no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 495px;
+        position: absolute;
+        bottom: 0;
+    }
+    .kl-svg-bea{
+        margin-top: -40px;
+        @include media-breakpoint-down(md){
+            margin-top: 0;
+        }
+    }
+}
+.kl-bg-arrow-yellow{
+    background: url("../images/ofa/arrow.svg") no-repeat;
+    background-size: 100%;
+    @include media-breakpoint-down(md) {
+        background-size: cover;
+    }
+    .kl-arrow-items{
+        height: 140px;
+        align-items: center;
+        @include media-breakpoint-down(xl) {
+            height: 110px;
+        }
+        @include media-breakpoint-down(lg) {
+            height: 80px;
+        }
+    }
+    .kl-text-graph{
+        @include media-breakpoint-down(lg){
+            font-size: 16px;
+        }
+    }
+}
+.kl-content-data{
+    @include media-breakpoint-down(xl) {
+        gap: 15px;
+    }
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+}
+.kl-data-desc-item{
+    max-width: 358px;
+    padding: 22px 15px 27px 32px;
+    z-index: 9;
+    @include media-breakpoint-down(xl){
+        padding: 12px 5px 17px 22px;
+    }
+    @include media-breakpoint-down(md){
+        margin-bottom: 15px;
+    }
+    &:nth-child(odd) {
+        p{
+            transform: rotate(-3deg);
+        }
+    }
+    &:nth-child(even) {
+        p{
+            transform: rotate(3deg);
+        }
+    }
+    &.kl-data-desc-item-sm {
+        background: url("../images/ofa/bg-white.svg") no-repeat;
+        background-size: 100%;
+        @include media-breakpoint-down(xl){
+            background: $white;
+            border-radius: 15px;
+            transform: rotate(-3deg);
+        }
+    }
+    &.kl-data-desc-item-md {
+        background: url("../images/ofa/bg-white-2.svg") no-repeat;
+        background-size: 100%;
+        @include media-breakpoint-down(xl){
+            background: $white;
+            border-radius: 15px;
+            transform: rotate(3deg);
+        }
+    }
+    &.kl-data-desc-item-lg {
+        background: url("../images/ofa/bg-white-3.svg") no-repeat;
+        background-size: 100%;
+        @include media-breakpoint-down(xl){
+            background: $white;
+            border-radius: 15px;
+            transform: rotate(-3deg);
+        }
+    }
+}
+.kl-titrage-video{
+    z-index: 9;
+}
+.kl-bloc-video-food{
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+    svg{
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .kl-videobloc{
+        iframe{
+            max-width: 799px;
+            margin: 0 auto;
+            right: 0;
+            max-height: 450px;
+            top: 28px!important;
+            transform: rotate(-3deg);
+            @include media-breakpoint-down(lg) {
+                width: 96% !important;
+                top: -2px !important;
+            }
+            @include media-breakpoint-down(lg) {
+                top: 0px !important;
+            }
+        }
+    }
+}
+
+.kl-sect-partener{
+    padding: 70px 0 60px;
+}
+.kl-bg-trace-red{
+    background: url("../images/ofa/bg-red-trace.svg") no-repeat;
+    background-position: center bottom;
+    padding: 0 0 30px;
+    @include media-breakpoint-down(md){
+        background-size: 100%;
+    }
+}
+
+.kl-partener-item{
+    text-decoration: none;
+    display: block;
+    max-width: 260px;
+    width: 100%;
+    &:hover{
+        img{
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    img{
+        max-width: 100%;
+        height: 188px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+.kl-sect-help{
+    position: relative;
+    z-index: 9;
+    .kl-text-help{
+        padding: 0 125px;
+        @include media-breakpoint-down(lg) {
+            padding: 0 15px;
+        }
+    }
+}
+.kl-svg-map-interactif{
+    width: 100%;
+    height: 100%;
+}
+.kl-sect-discovery{
+    padding-top: 40px;
+}
+.kl-svg-bea{
+    height: 180px;
+    @include media-breakpoint-down(lg){
+        top: 130px;
+        right: -50px;
+    }
+    @include media-breakpoint-down(md){
+        top: 0;
+        right: inherit;
+    }
+    svg{
+        position: absolute;
+        top: 50px;
+        right: 110px;
+    }
+    .kl-bea-ofa{
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        transform: rotate(-5deg);
+    }
+}

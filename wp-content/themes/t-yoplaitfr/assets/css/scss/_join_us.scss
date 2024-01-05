@@ -1,0 +1,229 @@
+.kl-section-strength-team{
+  p{
+    line-height: 23.22px;
+  }
+  .kl-title{
+    h3{
+      @extend %text_32;
+      font-family: $secondary_font;
+      font-weight: $semi_bold;
+    }
+  }
+}
+
+.kl-section-advantage{
+  padding: 110px 0;
+  position: relative;
+  .kl-decor-advantage{
+    position: absolute;
+    left: 0;
+    top: -75px;
+    z-index: -1;
+  }
+}
+
+.kl-list-tag-ctx{
+  h3{
+    @extend %text_32;
+    line-height: 1.43em;
+    font-weight: $regular;
+    font-family: $third_font;
+    color: $green_primary;
+    margin-bottom: 17px;
+  }
+  .kl-icon{
+    margin-right: 25px;
+    flex: 0 0 auto;
+  }
+}
+
+.kl-list-tag-row{
+  .kl-list-tag-ctx{
+    margin-right: 25px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.kl-section-company-mark{
+  padding-top: 50px;
+  @include media-breakpoint-up(xl){
+    padding-top: 130px;
+  }
+}
+
+.kl-cart-map{
+  .kl-img{
+    background: url(../images/join-us/bg-map.svg) no-repeat center;
+    background-size: auto;
+    @include media-breakpoint-down(xl){
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.kl-section-map-ctx{
+  padding: 120px 0 150px;
+  background: url(../images/join-us/bg-implation.png) no-repeat center;
+  background-size: 100% 100%;
+  strong{
+    font-weight: 700;
+  }
+  @include media-breakpoint-down(xl){
+    @include media-breakpoint-up(md){
+      .kl-info-nb{
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+.kl-section-hs-yop{
+  padding: 47px 0 120px;
+}
+
+.kl-section-info-collaborator{
+  position: relative;
+  padding: 40px 0 65px;
+  .kl-decor-flower{
+    position: absolute;
+    top: 130px;
+    z-index: -1;
+    left: 5%;
+    @include media-breakpoint-down(xl){
+      left: 0;
+    }
+    @include media-breakpoint-down(lg){
+      top: 25px;
+    }
+  }
+  .kl-default-ctx-stf{
+    p{
+      line-height: 1.2em;
+    }
+  }
+}
+
+.kl-section-ours-jobs{
+  padding: 120px 0;
+  position: relative;
+  .kl-decor-anim-jobs{
+    position: absolute;
+    top: -70px;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.kl-jobs-item{
+  .kl-title{
+    h3{
+      @extend %text_40;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.kl-section-want-join{
+  overflow: hidden;
+  position: relative;
+}
+.kl-bg-section-want-join{
+  padding: 157px 0 117px;
+  background: url(../images/join-us/bg-join-us.png) no-repeat left top;
+  position: relative;
+  .kl-default-ctx-stf{
+    h2{
+      @extend %text_61;
+    }
+  }
+  .kl-decor-right{
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    z-index: 1;
+    .kl-flower-decor{
+      position: absolute;
+      top: -125px;
+      right: 0;
+    }
+    .kl-figure{
+      margin-bottom: 0;
+      img{
+        @include mask_img('../images/mask/mask-join-right.png', 100%, 100%)
+      }
+    }
+  }
+  .kl-want-join-item{
+    position: relative;
+    padding-bottom: 50px;
+    z-index: 10;
+    @include media-breakpoint-down(xl){
+      padding-bottom: 90px;
+    }
+    @include media-breakpoint-down(md){
+      padding-bottom: 125px;
+    }
+    @include media-breakpoint-up(xxxl){
+      padding-bottom: 162px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl){
+  .kl-section-hs-yop{
+    padding: 47px 0 75px;
+  }
+  .kl-section-ours-jobs{
+    padding: 60px 0;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-section-map-ctx{
+    background-size: cover;
+  }
+  .kl-bg-section-want-join{
+    padding: 100px 0 80px;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .kl-list-tag-ctx{
+    .kl-icon{
+      margin-right: 15px;
+      max-width: 25px;
+    }
+  }
+  .kl-section-map-ctx{
+    background-size: cover;
+    padding: 50px 0;
+  }
+  .kl-section-advantage{
+    padding: 75px 0 50px;
+  }
+  .kl-section-hs-yop{
+    padding: 47px 0 40px;
+  }
+}
+
+@include media-breakpoint-up(md){
+
+}
+
+@include media-breakpoint-up(lg){
+  .kl-section-strength-team{
+    .kl-desc-prt{
+      max-width: 650px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .kl-section-hs-yop{
+    .kl-hs-desc{
+      width: 94%;
+    }
+  }
+}

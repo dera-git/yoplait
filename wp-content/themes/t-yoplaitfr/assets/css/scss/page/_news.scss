@@ -1,0 +1,92 @@
+.kl-sect-banner-new{
+    // background: url("../images/news/banner.png");
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    @include media-breakpoint-down(lg) {
+        background-position: 40% 0 !important;
+    }
+    .kl-title-new{
+        margin: 70px 0 230px;
+        padding: 7px 0 25px;
+        position: relative;
+        background: url("../images/news/Vector.png");
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        @include media-breakpoint-down(md){
+            margin: 70px 0 170px;
+        }
+        h2{
+            line-height: 0.875em !important;
+        }
+    }
+    .kl-new-title{
+        @include media-breakpoint-down(md){
+            margin: 0 auto;
+          }
+    }
+}
+
+.kl-section-actus-news{
+    position: relative;
+    padding-bottom: 104px;
+    @include media-breakpoint-down(md){
+        padding-bottom: 54px;
+    }
+    &::before{
+        content: "";
+        background: url("../images/news/top.svg") no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: -99px;
+        z-index: 1;
+        @media (min-width: 1600px){
+            height: 140px;
+            top: -130px;
+        }
+    }
+    &::after{
+        content: "";
+        background: url("../images/news/bottom.svg") no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 460px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        @include media-breakpoint-down(md){
+            height: 350px;
+        }
+    }
+    .kl-img-marques{
+        margin-bottom: 64px;
+        @include media-breakpoint-down(md){
+            margin-bottom: 0;
+        }
+    }
+    .kl-marque-news{
+        position: relative;
+        text-align: center;
+        top: -50px;
+        z-index: 9;
+        .kl-mt-new--30{
+            margin-top: -30px;
+        }
+        img{
+            border-radius: 5px;
+        }
+        svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0 auto;
+            @include media-breakpoint-down(lg){
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

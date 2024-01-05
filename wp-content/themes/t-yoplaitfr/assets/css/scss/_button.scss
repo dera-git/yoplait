@@ -1,0 +1,196 @@
+a{
+  text-decoration: none;
+}
+
+.kl-button-not-bg{
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.kl-navbar-toogler{
+  font-family: $font_primary;
+  font-weight: $regular;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color:$red_secondary !important;
+  box-shadow: none;
+  // background: url(../images/svg-globals/bg-btn-menu-mob.svg) no-repeat center / 100% 100%;
+  text-align: center;  
+  margin-top: 2px;
+  padding: 8px 9px 10px 6px;
+  border: none !important;
+  outline: none;
+  &:focus{
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+  }
+  svg{
+    path{
+      transform: none;
+      transition: transform .3s;
+    }
+  }
+  &[aria-expanded="true"]{
+    svg{
+      path{
+        &:first-of-type{
+          transform: rotate(45deg) translate(7px, -7px);
+        }
+        &:nth-of-type(2){
+          transform: translateX(-34px);
+        }
+        &:last-of-type{
+          transform: rotate(-45deg) translate(-13px, -2px);
+        }
+      }
+    }
+  }
+}
+
+.kl-btn-decor{
+  @extend %text_20;
+  display: inline-block;
+  border-radius: 60px;
+  position: relative;
+  transition: all ease 0.5s;
+  padding: 16px 45px 17px 56px;
+  color: $white !important;
+  font-weight: $regular;
+  text-align: center;
+  overflow: hidden;
+  &.kl-small{
+    @extend %text-18;
+    line-height: 1.2em;
+  }
+  &.kl-custom{
+    @extend %text_16;
+    padding: 5px 25px 6px 35px;
+    &:before{
+      left: 4px ;
+      top: -5px;
+      width: 41px;
+      height: 46px;
+      background: url(../images/svg-globals/decor-btn.svg) no-repeat;
+    }
+    &.kl-fill-beige-primary{
+      &:before{
+        background: url(../images/svg-globals/decor-btn-small-beige.svg) no-repeat;
+      }
+    }
+  }
+  &:before{
+    position: absolute;
+    content: "";
+    z-index: 2;
+    left: 8px ;
+    top: -10px;
+    width: 69px;
+    height: 74px;
+    background: url(../images/svg-globals/decor-btn.svg) no-repeat;
+  }
+  &.kl-fill-orange{
+    &:before{
+      background: url(../images/svg-globals/decor-btn-orange.svg) no-repeat;
+    }
+  }
+  &.kl-fill-beige-secondary{
+    &:before{
+      background: url(../images/svg-globals/decor-btn-beige-sd.svg) no-repeat;
+    }
+  }
+  &.kl-fill-beige-primary{
+    &:before{
+      background: url(../images/svg-globals/decor-btn-beige.svg) no-repeat;
+    }
+  }
+  &.kl-fill-green-secondary{
+    &:before{
+      background: url(../images/svg-globals/decor-btn-green-sd.svg) no-repeat;
+    }
+  }
+}
+
+.kl-btn-theme{
+  font-family: $chewyPro;
+  font-weight: $regular;
+  color: $white;
+  border-radius: 100px !important;
+  line-height: normal;
+  transform: scale(1);
+  transition: all .25s;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+.kl-btn-xl-theme{
+  font-size: 24px;
+  padding: 10.5px 33px 12.5px;
+  height: 56px;
+  @include media-breakpoint-down(lg){
+    font-size: 22px;
+    padding: 9px 28px 10px;
+    height: 50px;
+  }
+  @include media-breakpoint-down(lg){
+    font-size: 18px;
+    padding: 8px 28px 11px;
+    height: 45px;
+  }
+  &:hover{
+    color: $white;
+  }
+}
+.kl-btn-lg-theme{
+  font-size: 18px;
+  padding: 7px 20px;
+  height: 40px;
+  &:hover{
+    color: $white;
+  }
+}
+.kl-btn-md-theme{
+  font-size: 16px;
+  padding: 9.5px 20px;
+  height: 40px;
+  &:hover{
+    color: $white;
+  }
+}
+
+//buttons variant
+@each $color, $value in $theme_colors {
+  .kl-btn-#{$color} {
+    @include button_variant($value, $green_primary);
+  }
+}
+
+@include media-breakpoint-down(md){
+ .kl-btn-decor{
+   padding: 16px 35px 17px 45px;
+ }
+}
+
+.kl-btn-bordered{
+  border: 6px solid $white;
+  padding: 7px 34px;
+  transform: rotate(5deg);
+  font-size: 20px;
+}
+
+.kl-btn-w-hand{
+  position: relative;
+  &::before{
+    content: "";
+    background: url("../images/ofa/Hand.svg");
+    width: 79px;
+    height: 68px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    transform: rotate(-27.1deg);
+    object-fit: contain;
+  }
+}

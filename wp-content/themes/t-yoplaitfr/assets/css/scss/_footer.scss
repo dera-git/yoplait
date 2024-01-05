@@ -1,0 +1,135 @@
+.kl-footer{
+  padding: 62px 0 73px;
+  font-family: $secondary_font;
+  overflow: hidden;
+  p{
+    @extend %text_14;
+    font-weight: $medium;
+    color: $white;
+  }
+  a{
+    font-weight: $medium;
+    color: $white;
+    transition: all ease 0.5s;
+    &:hover{
+      color: $red_primary;
+
+    }
+  }
+}
+
+.kl-footer-item{
+  position: relative;
+  z-index: 10;
+  h3{
+    @extend %text_28;
+    font-weight: $semi_bold;
+  }
+  .kl-tel{
+    @extend %text_36;
+    font-weight: $regular;
+  }
+}
+
+.kl-list-footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li{
+    width: 50%;
+    margin-bottom: 13px;
+  }
+  a{
+    @extend %text_16;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-footer-wrapper{
+    justify-content: center;
+    text-align: center;
+  }
+  .kl-footer{
+    .kl-logo-footer{
+      text-align: center;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .kl-footer-item{
+    .kl-info{
+      max-width: 230px;
+      margin-left: auto;
+    }
+  }
+}
+
+.kl-custom-footer{
+  padding: 26px 0 75px;
+}
+.kl--logo-footer{
+  @include media-breakpoint-down(lg){
+    width: 180px;
+    margin: auto;
+  }
+  @include media-breakpoint-down(md){
+    width: 145px;
+  }
+}
+.kl-d-grid-footer{
+  display: grid;
+  grid-template-columns: 20% 35%  auto;
+  gap: 20px 30px;
+  @include media-breakpoint-down(xl){
+    grid-template-columns: 15% 35% auto;
+  }
+  @include media-breakpoint-down(lg){
+    grid-template-columns: 100%;
+    text-align: center;
+    gap: 45px 30px;
+    max-width: 415px;
+    margin: auto;
+  }
+}
+.kl-column-menu{
+  position: relative;
+  padding-left: 52px;
+  @include media-breakpoint-down(lg){
+    padding-left: 0;
+  }
+  .kl-line-svg-separator{
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+  }
+}
+.kl-menu-footer{
+  padding-top: 8px;
+  &:first-of-type{
+    flex: 0 0 auto;
+    width: 130px;
+    margin-right: 30px;
+    @include media-breakpoint-down(lg){
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  ul{
+    li{
+      & + li{
+        margin-top: 14px;
+      }
+      a{
+        font-family: $lexend;
+        font-size: 14px;
+        font-weight: $regular;
+        line-height: 17px;
+        color: $white;
+      }
+    }
+  }
+}

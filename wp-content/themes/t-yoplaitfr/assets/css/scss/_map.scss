@@ -1,0 +1,72 @@
+.kl-wrapper-map {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @include media-breakpoint-up(md) {
+        width: 60%;
+    }
+}
+
+.kl-marker-pin {
+    cursor: pointer;
+    .kl-marker-pin-image-active {
+        opacity: 0;
+    }
+    &:hover,
+    &:focus {
+        .kl-marker-pin-image {
+            opacity: 0;
+        }
+        .kl-marker-pin-image-active {
+            opacity: 1;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.kl-popover-pin {
+    background-color: $yellow;
+    border-radius: 17px;
+    border: none;
+    font-family: $font_primary;
+    z-index: 1019;
+    @include media-breakpoint-up(lg) {
+        max-width: 314px;
+    }
+    .popover-arrow {
+        display: none;
+    }
+    .popover-body {
+        padding: 12px;
+    }
+}
+
+.kl-popover-pin-img {
+    border-radius: 14px;
+    height: 132px;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 148px;        
+    }
+}
+.kl-popover-pin-infos {
+    color: $white;
+    font-size: 12px;
+    line-height: 1.55;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    .kl-popover-pin-img + & {
+        padding-top: 11px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 14px;
+    }
+}

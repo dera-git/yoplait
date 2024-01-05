@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'More Sugar';
+    src: url('MoreSugarRegular.eot');
+    src: url('MoreSugarRegular.eot?#iefix') format('embedded-opentype'),
+        url('MoreSugarRegular.woff2') format('woff2'),
+        url('MoreSugarRegular.woff') format('woff'),
+        url('MoreSugarRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

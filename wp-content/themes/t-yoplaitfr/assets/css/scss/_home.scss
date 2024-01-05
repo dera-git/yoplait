@@ -1,0 +1,81 @@
+.kl-section-yop-desc{
+  padding: 195px 0 75px;
+  .kl-desc{
+    span{
+      font-weight: 600;
+    }
+  }
+  @include media-breakpoint-up(md){
+    .kl-figure-logo{
+      transform: translateX(-15%);
+    }
+  }
+  @media (max-width: 1600px) {
+    @include media-breakpoint-up(md){
+      .kl-col-yop-info{
+        padding-left: 40px;
+      }
+    }
+    @include media-breakpoint-up(xl){
+      .kl-col-yop-info{
+        padding-left: 100px;
+        .kl-yop-info{
+          max-width: 495px;
+        }
+      }
+    }
+  }
+}
+
+.kl-section-join{
+  position: relative;
+  margin-top: 250px;
+  .kl-text{
+    max-width: 551px;
+  }
+  p{
+    @extend %text_24;
+  }
+  .kl-bg-section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+.kl-flours-figure{
+  figure{
+    position: relative;
+    .kl-decor-figure{
+      position: absolute;
+      top: -140px;
+      z-index: -1;
+      right: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(xl){
+  .kl-section-yop-desc{
+    padding: 100px 0 50px;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-section-join{
+    margin-top: 200px;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .kl-section-yop-desc{
+    padding: 60px 0 30px;
+  }
+}
+

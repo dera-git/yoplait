@@ -1,0 +1,86 @@
+@mixin color_theme($value){
+  color:$value !important;
+}
+
+@mixin bg_theme($value){
+  background:$value !important;
+}
+
+//font-weight
+@mixin font_weight($value) {
+  font-weight: $value !important;
+}
+
+//font-familly
+@mixin font_familly($value) {
+  font-family: $value !important;
+}
+
+//line-height
+@mixin line_height($val) {
+  line-height: $val !important;
+}
+
+@mixin button_variant($bg, $color) {
+  background-color: $bg;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($bg, 8%);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@mixin hs_desc_var($color){
+  color: $color;
+  p span, span{
+    color: $color;
+  }
+  p{
+    color: $black;
+  }
+}
+
+@mixin mask_img($url, $width, $height){
+  -webkit-mask-image: url($url);
+  mask-image:url($url);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: $width $height;
+  mask-size: $width $height;
+}
+
+@mixin anim_scrible_svg($color){
+  fill: $color;
+  stroke: $color;
+  svg {
+    fill: $color;
+    stroke: $color;
+    path{
+      fill: $color;
+      stroke: $color;
+    }
+  }
+}
+@mixin img_trans($transform, $width, $height){
+  transform: rotate(#{$transform});
+  width: $width;
+  height: $height;
+}
+
+@mixin fill_polyline($color){
+  polyline{
+    fill: transparent;
+    stroke:$color !important;
+  }
+}
+
+@mixin fill_path($color){
+  path{
+    fill: transparent;
+    stroke:$color !important;
+  }
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Chewy Pro';
+    src: url('ChewyPro.eot');
+    src: url('ChewyPro.eot?#iefix') format('embedded-opentype'),
+        url('ChewyPro.woff2') format('woff2'),
+        url('ChewyPro.woff') format('woff'),
+        url('ChewyPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

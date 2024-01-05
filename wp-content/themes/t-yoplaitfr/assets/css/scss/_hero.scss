@@ -1,0 +1,52 @@
+.kl-default-hero{
+  position: relative;
+  .kl-img-hero{
+    @include mask_img("../images/mask/mask-default-hero.png", 100%, 100%);
+    width: 100%;
+    object-fit:cover;
+  }
+}
+.kl-object-position-top {
+  .kl-img-hero {
+    object-position: center top;
+  }
+}
+
+.kl-product-hero {
+  padding-bottom: 4px;
+  position: relative;
+  overflow: visible;
+  .kl-img-hero {
+     mask-image : url("../images/mask/Mask-group.png");
+     mask-repeat : no-repeat;
+     mask-size : 100% 100%;
+  }
+  .kl-form-product-hero {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .kl-default-hero{
+    .kl-img-hero{
+      min-height: 300px;
+    }
+  }
+  .kl-product-hero {
+    .kl-img-hero{
+      min-height: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .kl-product-hero {
+    min-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 2px;
+  }
+}
